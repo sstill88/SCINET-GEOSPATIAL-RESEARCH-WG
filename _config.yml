@@ -17,18 +17,18 @@ featured-image: "/images/uidaho-workshop.jpg"
 # author settings for cc-by, appears in the footer
 author: evan will
 pub_year: 2019
-github_username: evanwill
+github_username: rmg55
 
 # add the full url for the github repository
-repo: "https://github.com/evanwill/workshop-template-b"
+repo: "https://github.com/rmg55/SCINET-GEOSPATIAL-RESEARCH-WG"
 
 # site urls
 # add the url for the domain,
 # on gh-pages follow the pattern: https://username.github.io 
-url: https://evanwill.github.io
+url: https://rmg55.github.io
 # add subsection of the domain,
 # on gh-pages this is a / followed by the name of the repository
-baseurl: /workshop-template-b
+baseurl: /SCINET-GEOSPATIAL-RESEARCH-WG
 
 # add search box to footer?
 search: true
