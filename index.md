@@ -3,25 +3,15 @@ title: Home
 layout: default
 ---
 
-# Bootstrap Workshop Template!
+# SCINet 2nd Annual Geospatial Workshop (2020)
 
-{% include figure.html img="uidaho-workshop.jpg" alt="intro image here" caption="Library workshop" width="75%" %}
+{% include figure.html img="usda_symbol_rgb_color.svg" alt="intro image here" caption="" width="100%" %}
 
-A minimal Jekyll theme with Bootstrap for creating workshop websites.
-
-*Add your workshop abstract here!*
-
-Write a workshop abstract here.
-
-Learn how to create a super quick easy website for a workshop by writing a few markdown files! 
-Host it for free on GitHub with gh-pages, and share!
-Fun!
-
-*See also:* [workshop-template](https://evanwill.github.io/workshop-template/), original minimal version.
+Workshop Abstract Here
 
 {% include toc.html %}
 
-Hosted by [University of Idaho Library](http://www.lib.uidaho.edu/), {{ site.pub_year }}.
+Hosted by [USDA ARS, SCINet Scientific Computing Initiative](https://scinet.usda.gov/), {{ site.pub_year }}.
 
 ------
 

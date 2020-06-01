@@ -1,47 +1,67 @@
 ---
-title: Start
+title: Tutorials
 nav: true
 ---
 
-# Get Started
-
-The `workshop-template-b` [repository](https://github.com/evanwill/workshop-template-b) is a skeleton project. 
-This [site](https://evanwill.github.io/workshop-template-b/) demonstrates the output on gh-pages, and the content pages serve as examples.
+All the tutorials are hosted at _______. Below is a brief description of each tutorial as well as an instructional on how to download and run them on the SCINet HPC Ceres.
 
 {% capture text %}
-1. Fork or import the [repository](https://github.com/evanwill/workshop-template-b) on GitHub.
-2. Clone to your local machine, or work on the GitHub web interface to edit files.
-3. Edit the `_config.yml` with your info.
-4. Edit the content pages in markdown.
-5. Add images to the "images" folder.
-5. Push to GitHub (or commit on the web interface).
-6. In your repo's settings, activate gh-pages, using master branch.{% endcapture %}
+* **Tutorials on Ceres 1**: How to Access/Run the tutorials on Ceres
+* **Tutorial 1**: Getting onto SCINet
+* **Tutorial 2**: Getting onto SCINet
+* **Tutorial 3**: Getting onto SCINet
+* **Tutorial 4**: Getting onto SCINet
+{% endcapture %}
 {% include card.md header="Overview" text=text %}
 
-## Config
+## Tutorials on Ceres
 
-Edit the `_config.yml` to get your workshop website set up.
+To run the tutorials (excluding the *logging into Ceres* tutorial) follow the below instructions:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Pellentesque eu velit felis. 
-Duis fermentum est nec mollis scelerisque. Vivamus interdum efficitur mauris, et dignissim velit egestas vitae. 
-Cras dignissim sagittis varius. Pellentesque eu laoreet dui.
+1. Log onto JupyterHub
+   * Go to www.wakjshf;aljdf.gov
+   * Fill out Spawn like:<br>
+     cores:<br> 
+     partition:<br>
+     container:kjhdsfa<br>
+2. Download the Material
+   * Open the terminal File-->New-->terminal
+   * Download the tutorials by cloning the github repository.
+      ```bash
+      git clone _________.git
+      ```
+3. Run a notebook:
+   * Browse to one of the tutorials and open it.
+   * Select the py_geo kernel
+   * Execute blocks of script
 
+```bash
+import numpy as np
+import pandas as pd
+import dask
 ```
-Praesent congue:
-    eros = eget
-    accumsan euismod
+
+
+## Tutorial 2: _____
+
+This tutorial teaches things....
+
+## Tutorial 3: _____
+
+This tutorial teaches things....
+
+```python
+import numpy as np
+import pandas as pd
+import dask
 ```
 
-Praesent congue, eros eget accumsan euismod, lorem dui vulputate leo, tincidunt efficitur risus metus ut risus. 
-Sed pharetra ipsum orci, eu cursus turpis semper egestas. 
+## Tutorial 4: _____
 
-> Pellentesque sodales, felis auctor auctor rutrum, velit quam interdum erat, sit amet placerat urna nisl at justo.
+This tutorial teaches things....
 
-## Substep
-
-Nam maximus eget orci id pretium. Pellentesque feugiat mauris eu nulla viverra consectetur. Nullam rutrum augue eget mauris accumsan, ac elementum tellus lacinia. Sed pretium aliquet tortor in ornare. Sed eget aliquet metus. Integer sed arcu turpis. Duis auctor sollicitudin semper. Cras posuere, neque nec varius cursus, massa libero sodales elit, sed tempor nibh ex sit amet nisi. Quisque consequat ante quis diam malesuada, in imperdiet tortor mattis. Aliquam erat volutpat. Morbi tortor elit, sagittis quis nibh ut, gravida cursus arcu.
-
-{% include figure.html img="uidaho-workshop.jpg" alt="workshop scene" caption="Be sure to replace all the example values!" width="75%" %}
-
-Ut dapibus lectus tristique efficitur dictum. Quisque efficitur ornare sagittis. Donec ex sem, volutpat quis scelerisque quis, scelerisque non neque. Vivamus convallis felis vel eros pulvinar faucibus. Aliquam finibus pretium odio a pharetra. Nullam ac commodo magna. Fusce et feugiat sem. Nunc vitae scelerisque metus. Aenean sodales placerat mi in aliquet. Curabitur pulvinar auctor mauris quis faucibus. Ut commodo imperdiet ante, at dignissim tellus ultricies ut. Donec at lacus ultrices sem vulputate semper. Donec commodo porta nunc, non tristique mi interdum quis. Phasellus rhoncus bibendum ipsum, ac malesuada augue pulvinar et. Etiam finibus lacus massa, sit amet faucibus lorem consequat sit amet. 
+```python
+import numpy as np
+import pandas as pd
+import dask
+```
