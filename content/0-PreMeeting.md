@@ -1,5 +1,5 @@
 ---
-title: Preparation
+title: Pre-Meeting
 nav: true
 --- 
 
@@ -19,10 +19,28 @@ The software discussed and shown in the workshop is largely open source, can run
 
 ## SCINet
 
+a;lksjdf
+
 ## Jupyter
+
+a;lsjdf
 
 ## Slurm
 
-## R
+al;isjdf
 
-## ???
+## Coding Languages
+
+### Python
+
+### R
+
+lasijdf;ja
+
+## Containers
+
+al;isjdf;
+
+## Environments
+
+la;ksjdf;jla
