@@ -8,10 +8,10 @@ Please review the workshop schedule and ......
 {% capture text %}
 1. Know which tutorials you wish the attend.
 2. Potentially submit a *computational problem* to the "Bring Your Own Data" (see below).
-2. Fork or import this [repository](https://github.com/evanwill/workshop-template-b).
-3. Optional: have [Git](https://git-scm.com/), [Jekyll](https://jekyllrb.com/), and a nice [text editor](https://code.visualstudio.com/) installed.
+3. asdfasdf.
+4. asdfasdfa.
 {% endcapture %}
-{% include card.md text=text header="Premeeting Checklist" %}
+{% include card.md text=text header="Pre-Meeting Checklist" %}
 
 ## Bring Your Own Data
 
@@ -30,7 +30,7 @@ Please submit an application to User.Name@usda.gov. In your email, please includ
 
 The software discussed and shown in the workshop is largely open source, can run on an HPC or cloud environmnet, and can be installed with software management systems that support reproducibility (such as conda, singularity, and docker).
 
-### SCINet
+### SCINet / Ceres
 
 a;lksjdf
 
@@ -44,16 +44,8 @@ al;isjdf
 
 ### Coding Languages
 
-#### Python
-
-#### R
-
 lasijdf;ja
 
-### Containers
+### Containers and Environments
 
-al;isjdf;
-
-### Environments
-
-la;ksjdf;jla
+a;klhdfa;kshdf;

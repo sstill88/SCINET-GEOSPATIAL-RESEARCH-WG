@@ -6,7 +6,7 @@ nav: true
 All the tutorials are hosted at _______. Below is a brief description of each tutorial as well as an instructional on how to download and run them on the SCINet HPC Ceres.
 
 {% capture text %}
-* **Tutorials on Ceres 1**: How to Access/Run the tutorials on Ceres
+* **Run Tutorials on Ceres**: How to Access/Run the tutorials on Ceres
 * **Tutorial 1**: Getting onto SCINet
 * **Tutorial 2**: Getting onto SCINet
 * **Tutorial 3**: Getting onto SCINet
@@ -14,7 +14,7 @@ All the tutorials are hosted at _______. Below is a brief description of each tu
 {% endcapture %}
 {% include card.md header="Overview" text=text %}
 
-## Run Tutorials on SCINet/Ceres
+## Run Tutorials on Ceres
 
 To run the tutorials (excluding the *Getting Started* tutorial) follow the below instructions:
 
@@ -51,7 +51,7 @@ This tutorial teaches things....
 
 ## Tutorial 4: Machine Learning with Harmonized Landsat Sentinel
 
-### 4a: Machine Learning Intro
+**4a: Machine Learning Intro**
 
 This tutorial briefly shows a subset of standard machine learning operations using a raster scene from the Harmonized Landsat Sentinel data. This tutorial does not require the computational capacity of SCINet, and can be executed on pesonal computing systems. This tutorial includes:
 
@@ -60,7 +60,7 @@ This tutorial briefly shows a subset of standard machine learning operations usi
 3. Train a model and optimize the hyperparameters (Scikit Learn).
 4. Quantify the accuracy and visualize the results (Scikit Learn, hvPlot).
 
-### 4b: Machine Learning - Distributed Learning on SCINet / Ceres
+**4b: Machine Learning - Distributed Learning on SCINet / Ceres**
 
 This tutorial uses machine learning, daily weather data (PRISM), physiologic variables (soil properties and topography) to predict NDVI from the Harmonized Landsat Sentinel (HLS) data at the Central Plains Experimental Range (CPER) Long Term Agro-ecosystem Research station. This workflow involves:
 
