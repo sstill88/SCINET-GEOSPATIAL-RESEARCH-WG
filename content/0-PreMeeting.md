@@ -40,22 +40,22 @@ Public URL to access JupyterHub:
 
 The software discussed and shown in the workshop is largely open source, can run on an HPC or cloud environmnet, and can be installed with software management systems that support reproducibility (such as conda, singularity, and docker).
 
-### SCINet / Ceres
+#### SCINet / Ceres
 
 a;lksjdf
 
-### Jupyter
+#### Jupyter
 
 a;lsjdf
 
-### Slurm
+#### Slurm
 
 al;isjdf
 
-### Coding Languages
+#### Coding Languages
 
 lasijdf;ja
 
-### Containers and Environments
+#### Containers and Environments
 
 a;klhdfa;kshdf;
