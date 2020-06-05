@@ -19,7 +19,8 @@ All the tutorials are hosted at _______. Below is a brief description of each tu
 To run the tutorials (excluding the *Getting Started* tutorial) follow the below instructions:
 
 1. Log onto JupyterHub
-   * Go to www.wakjshf;aljdf.gov
+   * Go to [https://jupyterhub.scinet.science](https://jupyterhub.scinet.science/)
+   * Log into the system with your SCINet credentials
    * Fill out Spawning Page with the following:
      ```
      cores: asdfadf

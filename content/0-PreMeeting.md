@@ -3,15 +3,19 @@ title: Pre-Meeting
 nav: true
 --- 
 
-Please review the workshop schedule and ......
+Please review the workshop schedule and pre-meeting tasks listed below.
 
 {% capture text %}
 1. Know which tutorials you wish the attend.
-2. Potentially submit a *computational problem* to the "Bring Your Own Data" (see below).
-3. asdfasdf.
-4. asdfasdfa.
+2. Potentially submit a *computational problem* to the "Bring Your Own Data" session (see below).
+3. Have SCINet credentials.
+4. Familiarize yourself with the software guide
 {% endcapture %}
 {% include card.md text=text header="Pre-Meeting Checklist" %}
+
+## Tutorials
+
+The tutorials presented on the workshop span the range of beginner (new to SCINet) to more advanced (Big Data and Machine Learning). If you have questions about the material, please do not hesitate to contact the organizing committee.
 
 ## Bring Your Own Data
 
@@ -24,6 +28,12 @@ We are asking participants to submit these challenges to the organizing committe
   3. I want to run XXX scenarios of my model (varying the forcing/input parameters). The model is compatible with Linux.
 
 Please submit an application to User.Name@usda.gov. In your email, please include ~3-5 sentences describing the computational bottleneck, ideal outcomes, and any other pertinent information.
+
+## SCINet Access
+
+link to tutorial detailing the process to get credentialed/activitated:
+
+Public URL to access JupyterHub:
 
 
 ## Guide on Software

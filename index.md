@@ -3,11 +3,13 @@ title: Home
 layout: default
 ---
 
-# SCINet 2nd Annual Geospatial Workshop (2020)
+# SCINet Geospatial Workshop (2020)
 
 {% include figure.html img="usda_symbol_rgb_color.svg" alt="intro image here" caption="" width="100%" %}
 
-Workshop Abstract Here
+Theme: **______? Harnessing SCINet for Geospatial Research**
+
+The 2020 SCINet Geospatial workshop will .....
 
 {% include toc.html %}
 
