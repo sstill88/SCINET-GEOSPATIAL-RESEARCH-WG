@@ -13,13 +13,13 @@ layout: default
 
 **Abstract:** The 2020 SCINet Geospatial workshop will .....
 
-<details>
-<summary>Website Content Metadata</summary>
-
 {% include toc.html %}
-
-</details>
 
 ------
 
+<details>
+<summary>Website Content Metadata</summary>
+
 {% include credits.html %}
+
+</details>
