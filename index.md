@@ -7,9 +7,9 @@ layout: default
 
 {% include figure.html img="usda_symbol_rgb_color.svg" alt="intro image here" caption="" width="100%" %}
 
-Theme: **______? Harnessing SCINet for Geospatial Research**
+**Theme:**______? Harnessing SCINet computational resources to further sustainable and intensified agriculture.
 
-The 2020 SCINet Geospatial workshop will .....
+**Abstract:** The 2020 SCINet Geospatial workshop will .....
 
 {% include toc.html %}
 

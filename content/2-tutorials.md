@@ -7,16 +7,16 @@ All the tutorials are hosted at _______. Below is a brief description of each tu
 
 {% capture text %}
 * **Run Tutorials on Ceres**: How to Access/Run the tutorials on Ceres
-* **Tutorial 1**: Getting onto SCINet
-* **Tutorial 2**: Getting onto SCINet
-* **Tutorial 3**: Getting onto SCINet
-* **Tutorial 4**: Getting onto SCINet
+* **Tutorial 1**: Intro to Ceres
+* **Tutorial 2**: Parallel and Distrubuted Computing (Python)
+* **Tutorial 3**: Developing Reproducible Research (Environments and Containers)
+* **Tutorial 4**: Machine Learning (Python)
 {% endcapture %}
 {% include card.md header="Overview" text=text %}
 
 ## Run Tutorials on Ceres
 
-To run the tutorials (excluding the *Getting Started* tutorial) follow the below instructions:
+To run the tutorials on Ceres (excluding the *Intro to Ceres* and *Developing Reproducible Research* tutorials) follow the below instructions:
 
 1. Log onto JupyterHub
    * Go to [https://jupyterhub.scinet.science](https://jupyterhub.scinet.science/)
@@ -42,11 +42,15 @@ To run the tutorials (excluding the *Getting Started* tutorial) follow the below
    * Select the py_geo kernel (upper right in the notebook)
    * Execute blocks of script.
 
-## Tutorial 2: _____
+## Tutorial 1: Intro to Ceres
 
 This tutorial teaches things....
 
-## Tutorial 3: _____
+## Tutorial 2: Parallel and Distrubuted Computing (Python)
+
+This tutorial teaches things....
+
+## Tutorial 3: Developing Reproducible Research
 
 This tutorial teaches things....
 
@@ -54,7 +58,7 @@ This tutorial teaches things....
 
 **4a: Machine Learning Intro**
 
-This tutorial briefly shows a subset of standard machine learning operations using a raster scene from the Harmonized Landsat Sentinel data. This tutorial does not require the computational capacity of SCINet, and can be executed on pesonal computing systems. This tutorial includes:
+This tutorial briefly shows a subset of standard machine learning operations using a raster scene from the Harmonized Landsat Sentinel data. This tutorial does not require the computational capacity of SCINet, and can be executed on pesonal computing systems. This tutorial covers the following:
 
 1. Read in data into a spatially aware object (Xarray).
 2. Preprocess, shuffle, and split into training and testing data (Scikit Learn).
@@ -69,13 +73,5 @@ This tutorial uses machine learning, daily weather data (PRISM), physiologic var
 2. Setup a cluster on Ceres (Dask Distributed)
 3. Setup a pipeline to merge/shuffle/split the data, optimize the hyperparameters, and train an XGBoost model (Scikit Learn, XGBoost, Dask).
 4. Quantify the accuracy and visualize the results (Scikit Learn, hvPlot).
-
-The data is stored in a [zarr](https://zarr.readthedocs.io/en/stable/) file format. The analysis is conducted in Python with the following packages:
-
-   * Dask - Distributed Computing
-   * Xarray - Multidimensional data arrays
-   * Sci-Kit Learn - Machine Learning
-   * XGBoost - Xtreme Gradient Boosting
-   * hvPlot - Interactive visualization library.
 
 A Jupyter notebook of the anlaysis on the github page (link: [Machine Learning Example]()). In addition a link to the static (non-interactive) version of the notebook.
