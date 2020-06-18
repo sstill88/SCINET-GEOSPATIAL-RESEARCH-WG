@@ -10,14 +10,14 @@ The schedule for the workshop is shown below. For details about each tutorial, p
 {% include button.md text="Download Outlook .ics Calendar" link="https://outlook.office365.com/owa/calendar/018b75463ead45cdae2a9288f8d95c13@usda.gov/aa87f67ad8e24bd3ab31abc8bad22a6b18052697946570333149/calendar.ics" color="info" %}
 
 <div class="span9">
-    <h3>Calendar</h3>
+    <h4>Calendar</h4>
 	<iframe src="https://outlook.office365.com/owa/calendar/018b75463ead45cdae2a9288f8d95c13@usda.gov/aa87f67ad8e24bd3ab31abc8bad22a6b18052697946570333149/calendar.html" style=" border-width:0 " width="100%" height="600" frameborder="0" scrolling="yes"></iframe>
 </div><!--/span-->
 <br>
 
-### Schedule
+#### Schedule
 
-{% capture text %}**All times in Mountain Standard Time.**{% endcapture %}
+{% capture text %}**The Following Schedule is in Mountain Standard Time.**{% endcapture %}
 {% include alert.md text=text color=secondary %}
 
 **PreMeeting** (August XX, 2020): Getting setup on SCINet<br>
