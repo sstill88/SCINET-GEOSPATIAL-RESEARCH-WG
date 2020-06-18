@@ -56,13 +56,14 @@ This tutorial teaches things....
 
 ## Tutorial 4: Machine Learning with Harmonized Landsat Sentinel
 
-**4a: Machine Learning Intro**
+This tutorial uses a machine learning model (XGBoost) to predict NDVI (Harmonized Landsat Sentinel) from daily weather (PRISM) and physiologic variables (soil properties) at the Central Plains Experimental Range (CPER) Long Term Agro-ecosystem Research station. This workflow involves:
 
-This tutorial uses machine learning, daily weather data (PRISM), physiologic variables (soil properties) to predict NDVI from the Harmonized Landsat Sentinel (HLS) data at the Central Plains Experimental Range (CPER) Long Term Agro-ecosystem Research station. This workflow involves:
-
-1. Setup a cluster on Ceres (Dask Distributed)
+1. Setup a cluster on Ceres (Dask Distributed).
 2. Read data and interpolate onto a consistent grid (Xarray, Dask Dataframe).
-3. Merge/shuffle/split the data, optimize the hyperparameters, and train an XGBoost model (Scikit Learn, XGBoost, Dask_ML).
+3. Merge/shuffle/split the data (Dask_ML, Scikit Learn).
+4. Optimize the hyperparameters (Dask_ML, Scikit Learn, XGBoost).
+5. Train a distributed XGBoost model (Scikit Learn, XGBoost, Dask_ML).
 4. Quantify the accuracy and visualize the results (Scikit Learn, hvPlot, Shap).
 
-A Jupyter notebook of the anlaysis on the github page (link: [Machine Learning Example](/images/Machine_Learning_Tutorial.html)). In addition a link to the static (non-interactive) version of the notebook.
+Static Notebook: [Machine Learning Example - Not complete](Machine_Learning_Tutorial.html)<br>
+Github Link:  
