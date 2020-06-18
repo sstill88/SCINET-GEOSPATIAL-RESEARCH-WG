@@ -5,15 +5,17 @@ nav: true
 
 # Schedule (Tentative - Not Final)
 
-The schedule for each session is below. Please visit the [Tutorials Page](2-tutorials.md) for more details about each tutorial. Add the events to you calendar with the below Outlook and Google calendar links.
+The schedule for the workshop is shown below. For details about each tutorial, please visit the [Tutorials Page](2-tutorials.md).
 
 {% include button.md text="Download Outlook .ics Calendar" link="https://outlook.office365.com/owa/calendar/018b75463ead45cdae2a9288f8d95c13@usda.gov/aa87f67ad8e24bd3ab31abc8bad22a6b18052697946570333149/calendar.ics" color="info" %}
 
-
 <div class="span9">
-	<h3>Workshop Schedule</h3>
+    <h3>Calendar</h3>
 	<iframe src="https://outlook.office365.com/owa/calendar/018b75463ead45cdae2a9288f8d95c13@usda.gov/aa87f67ad8e24bd3ab31abc8bad22a6b18052697946570333149/calendar.html" style=" border-width:0 " width="100%" height="600" frameborder="0" scrolling="yes"></iframe>
 </div><!--/span-->
+<br>
+
+### Schedule
 
 {% capture text %}**All times in Mountain Standard Time.**{% endcapture %}
 {% include alert.md text=text color=secondary %}
