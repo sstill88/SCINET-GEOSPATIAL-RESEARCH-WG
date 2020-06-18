@@ -58,20 +58,11 @@ This tutorial teaches things....
 
 **4a: Machine Learning Intro**
 
-This tutorial briefly shows a subset of standard machine learning operations using a raster scene from the Harmonized Landsat Sentinel data. This tutorial does not require the computational capacity of SCINet, and can be executed on pesonal computing systems. This tutorial covers the following:
+This tutorial uses machine learning, daily weather data (PRISM), physiologic variables (soil properties) to predict NDVI from the Harmonized Landsat Sentinel (HLS) data at the Central Plains Experimental Range (CPER) Long Term Agro-ecosystem Research station. This workflow involves:
 
-1. Read in data into a spatially aware object (Xarray).
-2. Preprocess, shuffle, and split into training and testing data (Scikit Learn).
-3. Train a model and optimize the hyperparameters (Scikit Learn).
-4. Quantify the accuracy and visualize the results (Scikit Learn, hvPlot).
+1. Setup a cluster on Ceres (Dask Distributed)
+2. Read data and interpolate onto a consistent grid (Xarray, Dask Dataframe).
+3. Merge/shuffle/split the data, optimize the hyperparameters, and train an XGBoost model (Scikit Learn, XGBoost, Dask_ML).
+4. Quantify the accuracy and visualize the results (Scikit Learn, hvPlot, Shap).
 
-**4b: Machine Learning - Distributed Learning on SCINet / Ceres**
-
-This tutorial uses machine learning, daily weather data (PRISM), physiologic variables (soil properties and topography) to predict NDVI from the Harmonized Landsat Sentinel (HLS) data at the Central Plains Experimental Range (CPER) Long Term Agro-ecosystem Research station. This workflow involves:
-
-1. Read data into a consistent projection (Xarray).
-2. Setup a cluster on Ceres (Dask Distributed)
-3. Setup a pipeline to merge/shuffle/split the data, optimize the hyperparameters, and train an XGBoost model (Scikit Learn, XGBoost, Dask).
-4. Quantify the accuracy and visualize the results (Scikit Learn, hvPlot).
-
-A Jupyter notebook of the anlaysis on the github page (link: [Machine Learning Example]()). In addition a link to the static (non-interactive) version of the notebook.
+A Jupyter notebook of the anlaysis on the github page (link: [Machine Learning Example](/images/Machine_Learning_Tutorial.html)). In addition a link to the static (non-interactive) version of the notebook.
