@@ -7,6 +7,12 @@ nav: true
 
 The schedule for each session is below. Please visit the [Tutorials Page](2-tutorials.md) for more details about each tutorial. Add the events to you calendar with the below Outlook and Google calendar links.
 
+{% include button.md text="Download Outlook .ics Calendar" link="https://outlook.office365.com/owa/calendar/018b75463ead45cdae2a9288f8d95c13@usda.gov/aa87f67ad8e24bd3ab31abc8bad22a6b18052697946570333149/calendar.ics" color="info" %}
+
+<div class="iframe">
+  <iframe src="https://outlook.office365.com/owa/calendar/018b75463ead45cdae2a9288f8d95c13@usda.gov/aa87f67ad8e24bd3ab31abc8bad22a6b18052697946570333149/calendar.html" frameborder="0" width=1100 height=500> </iframe>
+</div>
+
 {% capture text %}**All times in Mountain Standard Time.**{% endcapture %}
 {% include alert.md text=text color=secondary %}
 
@@ -36,6 +42,3 @@ The schedule for each session is below. Please visit the [Tutorials Page](2-tuto
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*1:15pm - 1:45pm* -- Speaker 3: Talk Title Hear<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*2:00pm - 3:00pm* -- Panel Discussion (Moderator: ______)
 
-{% include button.md text="Google Calendar" link="https://getbootstrap.com/docs/4.1/components/buttons/" color="info" %}
-<br>
-{% include button.md text="Outlook Calendar" link="https://getbootstrap.com/docs/4.1/components/buttons/" color="info" %}
