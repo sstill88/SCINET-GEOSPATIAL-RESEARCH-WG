@@ -35,7 +35,7 @@ The schedule for each session is below. Please visit the [Tutorials Page](2-tuto
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*12:00pm - 1:00pm* -- Approaches for Reproducible Research (Environments and containers on Ceres)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*3:00pm - 5:00pm* -- Distributed Machine Learning (Xgboost with NDVI, Soil, and Climate data)
 
-**Day Four** (Semptember 3, 2020): Speaker Day: Big Data and Machine Learning in Agricultural Research<br>
+**Day Four** (Semptember 3, 2020): Speaker Day<br>
 *Theme*: Challenges and opportunities in leveraging machine learning techniques to further sustainable and intensified agriculture.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*12:00pm - 12:30pm* -- Speaker 1: Talk Title Hear<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*12:35pm - 1:10pm* -- Speaker 2: Talk Title Hear<br>
