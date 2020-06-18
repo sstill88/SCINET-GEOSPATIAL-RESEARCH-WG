@@ -21,13 +21,12 @@ To run the tutorials on Ceres (excluding the *Intro to Ceres* and *Developing Re
 1. Log onto JupyterHub
    * Go to [https://jupyterhub.scinet.science](https://jupyterhub.scinet.science/)
    * Log into the system with your SCINet credentials
-   * Fill out Spawning Page with the following:
-     ```
-     cores: asdfadf
-     partition:  asdfasdf
-     container: asdfasdf
-     etc...
-     ```
+   * Fill out Spawning Page with the following:<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Node Type: ```short```<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Cores: ```4```<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Job Duration: ```04:00:00```<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to the container image: ```project/some/dir/data_science_im_rs_SCINet_WS_2020```<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Container Exec Args: ```--bind /etc/munge --bind /var/log/munge --bind /var/run/munge --bind /usr/bin/squeue --bind /usr/bin/scancel --bind /usr/bin/sbatch --bind /usr/bin/scontrol --bind /usr/bin/sinfo --bind /system/slurm:/etc/slurm --bind /run/munge --bind /usr/lib64/libslurm.so --bind /usr/lib64/libmunge.so.2 --bind /usr/lib64/slurm --bind  /project --bind /lustre --bind $HOME --bind /software/7/apps/envi -H $HOME:/home/jovyan```
 
 2. Download the Material
    * Open the terminal File-->New-->terminal
@@ -44,15 +43,22 @@ To run the tutorials on Ceres (excluding the *Intro to Ceres* and *Developing Re
 
 ## Tutorial 1: Intro to Ceres
 
-This tutorial teaches things....
+Link to Material: [Some Notebook rendered in HTML](Machine_Learning_Tutorial.html)<br>
+Github Link: 
 
 ## Tutorial 2: Parallel and Distrubuted Computing (Python)
 
 This tutorial teaches things....
 
+Static Notebook: [Some Notebook rendered in HTML](Machine_Learning_Tutorial.html)<br>
+Github Link: 
+
 ## Tutorial 3: Developing Reproducible Research
 
 This tutorial teaches things....
+
+Link to Material: [Some Notebook rendered in HTML](Machine_Learning_Tutorial.html)<br>
+Github Link:  
 
 ## Tutorial 4: Machine Learning with Harmonized Landsat Sentinel
 
@@ -66,4 +72,4 @@ This tutorial uses a machine learning model (XGBoost) to predict NDVI (Harmonize
 4. Quantify the accuracy and visualize the results (Scikit Learn, hvPlot, Shap).
 
 Static Notebook: [Machine Learning Example - Not complete](Machine_Learning_Tutorial.html)<br>
-Github Link:  
+Github Link: 
