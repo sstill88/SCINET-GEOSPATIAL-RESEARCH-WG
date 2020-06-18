@@ -9,7 +9,7 @@ The schedule for each session is below. Please visit the [Tutorials Page](2-tuto
 
 {% include button.md text="Download Outlook .ics Calendar" link="https://outlook.office365.com/owa/calendar/018b75463ead45cdae2a9288f8d95c13@usda.gov/aa87f67ad8e24bd3ab31abc8bad22a6b18052697946570333149/calendar.ics" color="info" %}
 
-<div class="iframe">
+<div class="iframe_container">
   <iframe src="https://outlook.office365.com/owa/calendar/018b75463ead45cdae2a9288f8d95c13@usda.gov/aa87f67ad8e24bd3ab31abc8bad22a6b18052697946570333149/calendar.html" frameborder="0" width=1100 height=500> </iframe>
 </div>
 
