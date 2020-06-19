@@ -3,8 +3,13 @@ title: Resources
 nav: true
 ---
 
-Further Resources to share
+## Other Relevant Geospatial Computational Resources
 
 earth_ml
+
 Coursera Opportunities
-Other
+
+Pangeo
+
+SCINet Website
+

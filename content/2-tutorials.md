@@ -14,6 +14,7 @@ All the tutorials are hosted at _______. Below is a brief description of each tu
 {% endcapture %}
 {% include card.md header="Overview" text=text %}
 
+---
 ## Run Tutorials on Ceres
 
 To run the tutorials on Ceres (excluding the *Intro to Ceres* and *Developing Reproducible Research* tutorials) follow the below instructions:
@@ -41,11 +42,15 @@ To run the tutorials on Ceres (excluding the *Intro to Ceres* and *Developing Re
    * Select the py_geo kernel (upper right in the notebook)
    * Execute blocks of script.
 
+---
 ## Tutorial 1: Intro to Ceres
+
+Perhaps we should create a markdown file for this tutorial
 
 Link to Material: [Some Notebook rendered in HTML](Machine_Learning_Tutorial.html)<br>
 Github Link: 
 
+---
 ## Tutorial 2: Parallel and Distrubuted Computing (Python)
 
 This tutorial teaches things....
@@ -53,14 +58,18 @@ This tutorial teaches things....
 Static Notebook: [Some Notebook rendered in HTML](Machine_Learning_Tutorial.html)<br>
 Github Link: 
 
+---
 ## Tutorial 3: Developing Reproducible Research
+
+Perhaps we should create a markdown file for this tutorial
 
 This tutorial teaches things....
 
 Link to Material: [Some Notebook rendered in HTML](Machine_Learning_Tutorial.html)<br>
 Github Link:  
 
-## Tutorial 4: Machine Learning with Harmonized Landsat Sentinel
+---
+## Tutorial 4: Machine Learning with Harmonized Landsat Sentinel (Python)
 
 This tutorial uses a machine learning model (XGBoost) to predict NDVI (Harmonized Landsat Sentinel) from daily weather (PRISM) and physiologic variables (soil properties) at the Central Plains Experimental Range (CPER) Long Term Agro-ecosystem Research station. This workflow involves:
 
@@ -68,8 +77,8 @@ This tutorial uses a machine learning model (XGBoost) to predict NDVI (Harmonize
 2. Read data and interpolate onto a consistent grid (Xarray, Dask Dataframe).
 3. Merge/shuffle/split the data (Dask_ML, Scikit Learn).
 4. Optimize the hyperparameters (Dask_ML, Scikit Learn, XGBoost).
-5. Train a distributed XGBoost model (Scikit Learn, XGBoost, Dask_ML).
+5. Train a distributed XGBoost model (Scikit Learn, XGBoost, Dask Distributed).
 4. Quantify the accuracy and visualize the results (Scikit Learn, hvPlot, Shap).
 
-Static Notebook: [Machine Learning Example - Not complete](Machine_Learning_Tutorial.html)<br>
+Static HTML Notebook: [Machine Learning Example - Not complete](Machine_Learning_Tutorial.html)<br>
 Github Link: 
