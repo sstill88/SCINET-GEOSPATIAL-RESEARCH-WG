@@ -7,20 +7,20 @@ All the tutorials are hosted at _______. Below is a brief description of each tu
 
 {% capture text %}
 * **Run Tutorials on Ceres**: How to Access/Run the tutorials on Ceres
-* **Tutorial 1**: Intro to Ceres
+* **Tutorial 1**: Intro to Ceres/JupyterHub
 * **Tutorial 2**: Parallel and Distrubuted Computing (Python)
-* **Tutorial 3**: Developing Reproducible Research (Environments and Containers)
+* **Tutorial 3**: Reproducible Research (Environments and Containers)
 * **Tutorial 4**: Machine Learning (Python)
 {% endcapture %}
 {% include card.md header="Overview" text=text %}
 
----
+------
 ## Run Tutorials on Ceres
 
 To run the tutorials on Ceres (excluding the *Intro to Ceres* and *Developing Reproducible Research* tutorials) follow the below instructions:
 
 1. Log onto JupyterHub
-   * Go to [https://jupyterhub.scinet.science](https://jupyterhub.scinet.science/)
+   * Go to [https://jupyterhub.scinet.usda.gov](https://jupyterhub.scinet.usda.gov)
    * Log into the system with your SCINet credentials
    * Fill out Spawning Page with the following:<br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Node Type: ```short```<br>
@@ -42,7 +42,7 @@ To run the tutorials on Ceres (excluding the *Intro to Ceres* and *Developing Re
    * Select the py_geo kernel (upper right in the notebook)
    * Execute blocks of script.
 
----
+------
 ## Tutorial 1: Intro to Ceres
 
 Perhaps we should create a markdown file for this tutorial
@@ -50,7 +50,7 @@ Perhaps we should create a markdown file for this tutorial
 Link to Material: [Some Notebook rendered in HTML](Machine_Learning_Tutorial.html)<br>
 Github Link: 
 
----
+------
 ## Tutorial 2: Parallel and Distrubuted Computing (Python)
 
 This tutorial teaches things....
@@ -58,7 +58,7 @@ This tutorial teaches things....
 Static Notebook: [Some Notebook rendered in HTML](Machine_Learning_Tutorial.html)<br>
 Github Link: 
 
----
+------
 ## Tutorial 3: Developing Reproducible Research
 
 Perhaps we should create a markdown file for this tutorial
@@ -68,7 +68,7 @@ This tutorial teaches things....
 Link to Material: [Some Notebook rendered in HTML](Machine_Learning_Tutorial.html)<br>
 Github Link:  
 
----
+------
 ## Tutorial 4: Machine Learning with Harmonized Landsat Sentinel (Python)
 
 This tutorial uses a machine learning model (XGBoost) to predict NDVI (Harmonized Landsat Sentinel) from daily weather (PRISM) and physiologic variables (soil properties) at the Central Plains Experimental Range (CPER) Long Term Agro-ecosystem Research station. This workflow involves:
