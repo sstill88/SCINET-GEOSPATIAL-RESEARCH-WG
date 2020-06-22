@@ -42,8 +42,8 @@ Ceres is the HPC system housed at Iowa State University. It contains 2500 comput
 
 **Project Jupyter**
 
-Jupyter is an open-source, non-profit project to support interactive data science and scientific computing. Jupyter is language agnostic, and supports ~130 different scinetific programing language kernels. This workshop will use the following two applications from the Jupyter software stack:
-  1. JupyterHub: A software to serve JupyterLab to multiple users (this is how we will launch an instance of JupyterLab). Documention at: [https://jupyterhub.readthedocs.io/en/stable/](https://jupyterhub.readthedocs.io/en/stable/)
+Jupyter is an open-source, non-profit project to support interactive data science and scientific computing. Jupyter is language agnostic with support for >130 different scinetific programing language kernels. This workshop will use the following two applications from the Jupyter software stack:
+  1. JupyterHub: A software to serve JupyterLab to multiple users (this is how we will launch an instance of JupyterLab on Ceres without having to to SSH into the cluster). Documention at: [https://jupyterhub.readthedocs.io/en/stable/](https://jupyterhub.readthedocs.io/en/stable/)
   2. JupyterLab: A web-based interactive development environment. Documentation at: [https://jupyterlab.readthedocs.io/en/stable/](https://jupyterlab.readthedocs.io/en/stable/)
 
 **Slurm**
@@ -60,8 +60,8 @@ Environments are a method of isolating a set of software installed on a computin
 
 Containers are a unit of isolated software that include an entire runtime environment (applications, dependencies, libraries, and binaries). These systems were created to be able to reliably run computing environments across hetereogenous infrastructure. The container system used on Ceres (and most other HPC systems) is [singularity](https://sylabs.io/docs/). However, singularity is able to use containers from Docker, a much more prevalent containerization software.
 
-The use of both containers and environments can vastly improve the reproduciblity of computatoinal research.
+The use of both containers and environments can vastly improve the reproduciblity of computatoinal research. Environments are able to acheive this by keeping a detailed list of the exact software environment used for the computation. Containers are able to further this effort by essentially archiving/saving the exact environment in a "*container file*", which others can access and use on other systems.
 
 **GitHub**
 
-GitHub is a Git (version controll software) repository hosting service. Much of the workshops materials will be accessible thru the workshops GitHub repository at: [https://github.com/kerriegeil/SCINET-GEOSPATIAL-RESEARCH-WG](https://github.com/kerriegeil/SCINET-GEOSPATIAL-RESEARCH-WG)
+GitHub is a Git (version controll software) repository hosting service. Much of the workshops materials will be accessible thru the workshops GitHub repository at: [https://github.com/kerriegeil/SCINET-GEOSPATIAL-RESEARCH-WG](https://github.com/kerriegeil/SCINET-GEOSPATIAL-RESEARCH-WG). GitHub allows you to version and/or archive your code.
