@@ -85,4 +85,4 @@ This tutorial uses a machine learning model (XGBoost) to predict NDVI (Harmonize
 4. Quantify the accuracy and visualize the results (Scikit Learn, SHAP).
 
 Static HTML Notebook: [Machine_Learning_Tutorial.html](Machine_Learning_Tutorial.html)<br>
-Github Link: https://github.com/rmg55/SCINET-GEOSPATIAL-RESEARCH-WG/blob/dev/tutorials/Machine_Learning_Tutorial.ipynb
+Github Link: [https://github.com/rmg55/SCINET-GEOSPATIAL-RESEARCH-WG/blob/dev/tutorials/Machine_Learning_Tutorial.ipynb](https://github.com/rmg55/SCINET-GEOSPATIAL-RESEARCH-WG/blob/dev/tutorials/Machine_Learning_Tutorial.ipynb)
