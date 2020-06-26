@@ -16,16 +16,16 @@ Please review the workshop schedule and pre-meeting tasks listed below.
 ------
 ## Tutorials
 
-The tutorials span the range of beginner (new to SCINet/Ceres) to more advanced (Big Data and Machine Learning). If you have questions about the material, please do not hesitate to contact the organizing committee.
+The tutorials span the range from beginner (new to SCINet/Ceres) to more advanced (Big Data and Machine Learning). If you have questions about the material, please do not hesitate to contact the organizing committee.
 
 In general, these tutorials assume some level of knowledge in scientific programming.
 
 ------
 ## Ceres Access
 
-SCINet credentialing process: [https://scinet.usda.gov/guide/quickstart](https://scinet.usda.gov/guide/quickstart)
+SCINet credentials process: [https://scinet.usda.gov/guide/quickstart](https://scinet.usda.gov/guide/quickstart)
 
-Access JupyterHub (with SCINet credentials): [https://jupyterhub.scinet.usda.gov/](https://jupyterhub.scinet.usda.gov/)
+Access JupyterHub (need SCINet credentials): [https://jupyterhub.scinet.usda.gov/](https://jupyterhub.scinet.usda.gov/)
 
 If you have issues accessing Ceres (either thru SSH or JupyterHub) please attend the premeeting event (see the schedule) where the Virtual Research Support Core (VRSC) will be able to help trouble shoot any issues.
 
@@ -52,7 +52,7 @@ Jupyter is an open-source, non-profit project to support interactive data scienc
 
 **Scientific Coding Languages - Python and R**
 
-The tutorials in this workshop will use Python, but we will make an effort to discuss alternative approaches in R. Python and R appear to be the most common scientific programming languages used across ARS. We choose to focus on Python simply due to instructor expertise. However, many of these examples could also be run in other programming languages such as Julia, Go, IDL/ENVI, etc...
+The tutorials in this workshop will use Python, but we will make an effort to discuss alternative approaches in R. Python and R appear to be the most common scientific programming languages used across ARS. We choose to focus on Python simply due to instructor expertise/background. However, many of these examples could also be run in other programming languages such as R, Julia, Go, IDL/ENVI, etc...
 
 **Containers and Environments**
 

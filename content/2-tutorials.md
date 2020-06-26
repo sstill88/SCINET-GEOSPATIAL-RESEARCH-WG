@@ -22,11 +22,11 @@ To run the tutorials on Ceres (excluding the *Intro to Ceres* and *Developing Re
 1. Log onto JupyterHub
    * Go to [https://jupyterhub.scinet.usda.gov](https://jupyterhub.scinet.usda.gov)
    * Log into the system with your SCINet credentials
-   * Fill out Spawning Page with the following:<br>
+   * Submit the Spawning Page with the following information (if not specified below, leave blank):<br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Node Type: ```short```<br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of Cores: ```4```<br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Job Duration: ```04:00:00```<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to the container image: ```project/some/dir/data_science_im_rs_SCINet_WS_2020```<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Path to the container image: ```/lustre/project/geospatial_tutorials/wg_2020_ws/data_science_im_rs_latest.sif```<br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Container Exec Args: ```--bind /etc/munge --bind /var/log/munge --bind /var/run/munge --bind /usr/bin/squeue --bind /usr/bin/scancel --bind /usr/bin/sbatch --bind /usr/bin/scontrol --bind /usr/bin/sinfo --bind /system/slurm:/etc/slurm --bind /run/munge --bind /usr/lib64/libslurm.so --bind /usr/lib64/libmunge.so.2 --bind /usr/lib64/slurm --bind  /project --bind /lustre --bind $HOME --bind /software/7/apps/envi -H $HOME:/home/jovyan```
 
 2. Download the Material
@@ -71,14 +71,18 @@ Github Link:
 ------
 ## Tutorial 4: Machine Learning with Harmonized Landsat Sentinel (Python)
 
+To launch JupyterHub and download the workshop materials, see the *Run Tutorials on Ceres* section (above).
+
+Run the notebook titled: *Machine_Learning_Tutorial.ipynb*
+
 This tutorial uses a machine learning model (XGBoost) to predict NDVI (Harmonized Landsat Sentinel) from daily weather (PRISM) and physiologic variables (soil properties) at the Central Plains Experimental Range (CPER) Long Term Agro-ecosystem Research station. This workflow involves:
 
 1. Setup a cluster on Ceres (Dask Distributed).
 2. Read data and interpolate onto a consistent grid (Xarray, Dask Dataframe).
 3. Merge/shuffle/split the data (Dask_ML, Scikit Learn).
 4. Optimize the hyperparameters (Dask_ML, Scikit Learn, XGBoost).
-5. Train a distributed XGBoost model (Scikit Learn, XGBoost, Dask Distributed).
-4. Quantify the accuracy and visualize the results (Scikit Learn, hvPlot, Shap).
+5. Train a distributed XGBoost model (Scikit Learn, XGBoost, Dask Distributed, datashader).
+4. Quantify the accuracy and visualize the results (Scikit Learn, SHAP).
 
-Static HTML Notebook: [Machine Learning Example - Not complete](Machine_Learning_Tutorial.html)<br>
+Static HTML Notebook: [Machine Learning Example](Machine_Learning_Tutorial.html)<br>
 Github Link: 
