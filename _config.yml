@@ -17,15 +17,15 @@ featured-image: "/images/usda_symbol_rgb_color.svg"
 # author settings for cc-by, appears in the footer
 author: Rowan Gaffney / Kerrie Geil
 pub_year: 2020
-github_username: rmg55
+github_username: kerriegeil
 
 # add the full url for the github repository
-repo: "https://github.com/rmg55/SCINET-GEOSPATIAL-RESEARCH-WG"
+repo: "https://github.com/kerriegeil/SCINET-GEOSPATIAL-RESEARCH-WG"
 
 # site urls
 # add the url for the domain,
 # on gh-pages follow the pattern: https://username.github.io 
-url: https://rmg55.github.io
+url: https://kerriegeil.github.io
 # add subsection of the domain,
 # on gh-pages this is a / followed by the name of the repository
 baseurl: /SCINET-GEOSPATIAL-RESEARCH-WG
