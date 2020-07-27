@@ -37,7 +37,6 @@ The schedule for the workshop is shown below. For details about each tutorial, p
 ------
 **Day Two** (September 1, 2020): Tutorials (Part 1): <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*12:00pm - 1:00pm* -- Access Ceres (Secure Shell, JupyterHub, RStudio Server)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*12:30pm - 12:45pm* -- Break<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*12:45pm - 2:15pm* -- Introduction to Distributed Computing (Python)
 
 ------
