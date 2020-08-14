@@ -118,46 +118,31 @@ We won't cover how to revert your repo to a previous commit in this tutorial but
 
 
 
-
-Step 1: copy an existing Github repo to your local computer (in this case your Ceres HPC account) (git clone)
-
-Find the URL to the Github repo that you want to copy. Usually you are either given this URL or you can get it from Github. Let's copy the repo called "Spoon-Knife" on Kerrie Geil's Github page.
-
-a. Login to [Github](https://github.com/) with your username and password.
-
-b. In the black Github search bar at the top left where it says "Search or jump to", type kerriegeil, and select the dropdown list option that says search kerriegeil All Github.
-
-c. On the bottom of the resulting menu click Users, then click Kerrie Geil on the right to see all the public repos on her account.
-
-d. Click on the Spoon-Knife repo. Then click on the green button that says Code and copy the URL to the repo by clicking on the clipboard icon. The link should be [https://github.com/kerriegeil/Spoon-Knife](https://github.com/kerriegeil/Spoon-Knife).
-
-e. SSH into your Ceres account from a terminal/command line. See the [Ceres Quick Start Guide](https://scinet.usda.gov/guide/quickstart#accessing-scinet) for instructions.
-
-f. Navigate to the location on Ceres where you want to copy the repo. It's small so putting it in your home directory is fine (~/home/username).
-
-g. Copy the repo to your current location on Ceres by typing
-
-```git clone paste_or_type_the_repo_URL```
-
-
-
-
-Step 3: push your local repo to an online remote repo on your github account
-
-a. navigate to your github account homepage, click the repositories tab, click the green New button
-
-
-
-push repo online
-pull request
-
-git pull to update local repo before working every time
-show how to access all the code versions
-ASK ROWAN IF HE HAS A GOOD VERSION NAMING/SAVING METHOD
-
 ### A Workflow Starting From the Command Line
-git init
-push to repo online...
+Sometimes you'll want to start a brand new local repo right from the command line and then push your local repo up to Github. Here's how to do it.
+
+Step 1: Initialize a new local git repository
+a. Create a new local directory where you want your new local repo to live and navigate into it
+```mkdir my_new_repo```
+```cd my_new_repo```
+b. Initialize a new local git repository
+```git init```
+
+Step 2: Edit away!
+adding content to your local repo is the exact same process as Step 3 in the previous workflow
+
+Step 3: create a remote repo on Github and push your local repo up to your Github repo
+a. login to your Github account
+b. navigate to your repositories page, click the green New button
+c. give your new Github repo the same name my_new_repo
+d. you can skip the section about creating a readme, license, gitignore because you'll be importing an existing repo
+e. follow the instructions to push an existing repo from the command line
+  - ```git remote add origin https://github.com/yourusername/my_new_repo.git```
+  - ``git push origin```
+f. refresh your Github repo page, you should see all your local files now in your Github repo
+
+
+
 
 
 # Conda
