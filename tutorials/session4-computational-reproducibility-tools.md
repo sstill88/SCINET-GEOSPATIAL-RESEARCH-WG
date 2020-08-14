@@ -1,6 +1,7 @@
 # Session 4 Tutorial: Computational Reproducibility Tools (Git/Github, Conda, Docker/Singularity containers)
 
 [Git and Github](#git-and-github)
+  - [Why Use Git/Github?](#why-use-gitgithub)
   - [Terminology](#git-terminology)
   - [Using Git & Github to Archive and Version Your Codes](#using-git-and-github-to-archive-and-version-your-codes)
     - [A Workflow Starting from Github](#a-workflow-starting-from-github)
@@ -8,11 +9,13 @@
   - [Additional Git Commands](#additional-git-commands)
 
 [Conda](#conda)
+  - [Why Use Conda?](#why-use-conda)
   - [Terminology](#conda-terminology)
   - [Accessing Conda on Ceres](#accessing-conda-on-ceres)
   - [Conda Environments](#conda-environments)
   
 [Containers (Docker and Singularity)](#containers-docker-and-singularity)
+  - [Why Use Containers?](#why-use-containers)
   - [Terminology](#container-terminology)
   - [Accessing an Existing Docker Image](#accessing-an-existing-docker-image)
   - [Running a Container on Ceres](#running-a-container-on-ceres)
@@ -21,6 +24,9 @@
 ---
 
 # Git and Github
+
+## Why Use Git/Github?
+
 
 ## Git Terminology
 
@@ -215,6 +221,8 @@ Note: from the command line creating a new branch does not create a new folder i
 
 # Conda
 
+## Why Use Conda?
+
 ## Conda Terminology
 conda, packages, environment, specfile, yml
 
@@ -238,6 +246,8 @@ export env to spec file
 
 
 # Containers (Docker and Singularity)
+
+## Why Use Containers?
 
 ## Container Terminology
 image, container, Docker, DockerHub dockerfile, Singularity
