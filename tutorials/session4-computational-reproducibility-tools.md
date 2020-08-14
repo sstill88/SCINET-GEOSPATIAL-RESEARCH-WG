@@ -54,7 +54,7 @@
 ### A Workflow Starting From Github
 
 This example workflow demonstrates how to:
-  - copy an existing Github repo to your own Github account [(Step 1)](#step-1-fork-a-github-repo-on-github-copy-an-existing-repo-to-your-own-github-account),
+  - copy an existing Github repo to your own Github account [(Step 1)](#step-1-fork-a-github-repo-on-github-copy-an-existing-github-repo-to-your-own-github-account),
   - make a local copy of your Github repo on your computer, in this case your Ceres account [(Step 2)](#step-2-create-a-local-repo-on-ceres-from-your-github-repo-git-clone)
   - make changes to the repo files locally [(Step 3)](#step-3-make-changes-to-your-local-repo-and-make-multiple-commits-to-create-a-series-of-snapshots-of-your-changes-make-edits-git-add-git-commit-m-message), 
   - push your local repo changes to your Github repo [(Step 4)](#step-4-push-your-local-changes-up-to-your-remote-repo-on-your-github-account), and 
@@ -85,7 +85,7 @@ d. Back at the command line type the following to make a local copy of your Gith
 ```git clone paste_or_type_the_repo_URL```
 <br><br>
 
-#### Step 3: Make Changes to Your Local Repo and Make Multiple Commits to Create a Series of "Snapshots" of Your Changes (make edits, git add, git commit -m "message")
+#### Step 3: Make Changes to Your Local Repo and Make Multiple Commits to Create a Series of Snapshots of Your Changes (make edits, git add, git commit -m "message")
 
 a. Create some new text files using your name as the file name<br>
 ```touch yourname1.txt yourname2.txt yourname3.txt```<br>
