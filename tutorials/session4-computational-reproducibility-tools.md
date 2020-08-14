@@ -1,7 +1,5 @@
 # Session 4 Tutorial: Computational Reproducibility Tools (Git/Github, Conda, Docker/Singularity containers)
 
-**Quick Links**
-
 [Git and Github](#git-and-github)
   - [Terminology](#git-terminology)
   - [Using Git & Github to Archive and Version Your Codes](#using-git-and-github-to-archive-and-version-your-codes)
@@ -19,6 +17,7 @@
   - [Running a Container on Ceres](#running-a-container-on-ceres)
   - [Creating a New Docker Image from an Existing Image](#creating-a-new-docker-image-from-an-existing-image)
 
+---
 
 # Git and Github
 
@@ -61,68 +60,89 @@ This example workflow demonstrates how to:
   - have your repo edits incorporated back into the online repo that you originally copied from on Github (Step 5). 
 
 
-#### Step 1: Fork a Github repo (on Github, copy an existing Github repo to your own Github account)
+#### Step 1: Fork a Github Repo (on Github, copy an existing Github repo to your own Github account)
+
 a. Login to [Github](https://github.com/) with your username and password.
+
 b. Find the Github repo that you want to copy. Let's copy the repo called "Spoon-Knife" on Kerrie Geil's Github page.
   - In the black Github search bar at the top left where it says "Search or jump to", type kerriegeil, and select the dropdown list option that says search kerriegeil All Github.
   - On the bottom of the resulting menu click Users, then click Kerrie Geil on the right to see all the public repos on her account.
   - Click on the Spoon-Knife repo. You should be here: https://github.com/kerriegeil/Spoon-Knife.
+  
 c. Click Fork on the top right of the repo page and then click on your github username when you are asked where to fork to. You have now copied the repo to your own account. Notice the URL you are at- it should be github.com/yourusername/reponame
 
 
-Step 2: create a local repo on Ceres from your Github repo (git clone)
+#### Step 2: Create a Local Repo on Ceres From Your Github Repo (git clone)
+
 a. SSH into your Ceres account from a terminal/command line. See the [Ceres Quick Start Guide](https://scinet.usda.gov/guide/quickstart#accessing-scinet) for instructions.
+
 b. Navigate to the location on Ceres where you want to copy the repo. It's small so putting it in your home directory is fine (~/home/username).
+
 c. Go back to Github to get the URL of your Github repo. On your repo page, click the green Code button to find the repo address. It should be in the form https://github.com/username/reponame.git
+
 d. Back at the command line type the following to make a local copy of your Github repo
 ```git clone paste_or_type_the_repo_URL```
 
 
-Step 3: make changes to your local repo and make multiple commits to create a series of "snapshots" of your changes (make edits, git add, git commit -m "message")
-a. create some new text files using your name as the file name
+#### Step 3: Make Changes to Your Local Repo and Make Multiple Commits to Create a Series of "Snapshots" of Your Changes (make edits, git add, git commit -m "message")
+
+a. Create some new text files using your name as the file name
 ```touch yourname1.txt yourname2.txt yourname3.txt```
-to see the files you just created
-```ls```
-b. check the status of your edits. The changed files should appear as untracked files
+```ls``` to see the files you just created
+
+b. Check the status of your edits. The changed files should appear as untracked files
 ```git status```
-c. stage the edits before committing. You are "telling Git" what files you want to include in a future commit.
+
+c. Stage the edits before committing. You are "telling Git" what files you want to include in a future commit.
 ```git add yourname1.txt```
 ```git add yourname2.txt yourname3.txt```
-d. check the status of your edits. The changed files should now appear as changes to be committed
-``git status```
-e. commit the edits to include them in a snapshot of your updated local repo
-```git commit -m "create new text files"```
-f. check the status of your edits again. The changed files should no longer appear. If you've committed all your changes you should see "nothing to commit, working directory clean" 
+
+d. Check the status of your edits. The changed files should now appear as changes to be committed
 ```git status```
+
+e. Commit the edits to include them in a snapshot of your updated local repo
+```git commit -m "create new text files"```
+
+f. Check the status of your edits again. The changed files should no longer appear in the status output. If you've committed all your changes you should see "nothing to commit, working directory clean" 
+```git status```
+
 g. Let's do it again. Edit the file hi-my-name-is.txt to include your name
-```nano hi-my-name-is.txt```
-Type your name, then hit Ctl+O then enter to write, Ctl+X to exit
+```nano hi-my-name-is.txt``` then type your name, hit Ctl+O then enter to write, Ctl+X to exit
+
 h. Stage your edits
 ```git add hi-my-name-is.txt```
-f. another commit
+
+f. Another commit
 ```git commit -m "update with my name"```
-g. check the status of the changes, working directory should now be clean meaning all changes have been committed to an updated "snapshot"
+
+g. Check the status of the changes. Working directory should now be clean, meaning all changes have been committed to an updated "snapshot"
 ```git status```
 
 
-Step 4: Push your local changes up to your remote repo on your Github account
-a. if you want to double check what remote repo(s) is/are associated with your local repo, at the command line type
+#### Step 4: Push Your Local Changes Up to Your Remote Repo on Rour Github Account
+
+a. If you want to double check what remote repo(s) is/are associated with your local repo, at the command line type
 ```git remote -v```
-you should see that your remote repo is called "origin" for short and that the URL to the remote repo is https://github.com/yourusername/reponame.git, the same URL we used when we cloned the repo to your local computer
-b. push your local changes to your remote repo on your Github account with
+
+You should see that your remote repo is called "origin" for short and that the URL to the remote repo is https://github.com/yourusername/reponame.git, the same URL we used when we cloned the repo to your local computer
+
+b. Push your local changes to your remote repo on your Github account with
 ```git push origin```
+
 c. Go back to your repo on Github and refresh the page. You should see your new files appear now on Github
 
 
-Step 5: Make a pull request to the original repo (request that your changes be incorporated into the original repo)
-a. To add your repo changes into the original repo at kerriegeil/Spoon-Knife navigate back to that original repo page
-b. Now submit a pull request. You are requesting that kerriegeil incorporate ("pull") your edits into her repo
+#### Step 5: Make a Pull Request to the Original Repo (request that your changes be incorporated into the original repo)
+
+a. To add your repo changes into the original repo at kerriegeil/Spoon-Knife, navigate back to that original repo page
+
+b. Now submit a pull request. You are requesting that kerriegeil incorporate (or "pull") your edits into her repo
   - click the Pull Requests tab
   - click the green New Pull Request button
   - click the link near the top that says "compare across forks"
   - ensure the base repository is kerriegeil/Spoon-Knife and the base branch is Master (left side of the arrow)
   - ensure that the head repository is yourusername/Spoon-Knife and the compare branch is Master (right side of the arrow)
-  - click the green Create Pull Request button. The fate of your pull request now lies with the owner of the original repo
+  - click the green Create Pull Request button. The fate of your pull request now lies with the owner of the original repo. The will see your pull request and approve/merge your changes to their repo.
 
 
 
