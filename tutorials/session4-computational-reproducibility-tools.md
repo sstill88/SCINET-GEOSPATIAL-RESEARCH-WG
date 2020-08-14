@@ -46,7 +46,7 @@
 **PULL REQUEST** - the process of requesting that changes you have made to your repo branch be incorportated into someone else's version of the repo. For example, you fork (copy) someone's existing Github repo to a repo on your own Github account and you then make changes to some of the files. If you want the original repo that you copied from to incorporate your changes into their repo, then you would make a pull request. It is called a pull request because you are requesting that someone else pulls and merges your edits into their online repo.
 
 **MERGE** - the process of combining multiple sequences of commits into one unified history. Most often used to incorporate changes from one branch into another. A merge happens when you pull, push, and pull request.
-
+<br>
 
 ## Using Git and Github to Archive and Version Your Codes
 
@@ -78,7 +78,7 @@ a. SSH into your Ceres account from a terminal/command line. See the [Ceres Quic
 
 b. Navigate to the location on Ceres where you want to copy the repo. It's small so putting it in your home directory is fine (~/home/username).
 
-c. Go back to Github to get the URL of your Github repo. On your repo page, click the green Code button to find the repo address. It should be in the form "https://github.com/username/reponame.git"
+c. Go back to Github to get the URL of your Github repo. On your repo page, click the green Code button to find the repo address. It should be in the form github.com/username/reponame.git
 
 d. Back at the command line type the following to make a local copy of your Github repo<br>
 ```git clone paste_or_type_the_repo_URL```
@@ -124,7 +124,7 @@ g. Check the status of the changes. Working directory should now be clean, meani
 
 a. If you want to double check what remote repo(s) is/are associated with your local repo, at the command line type<br>
 ```git remote -v```<br>
-You should see that your remote repo is called "origin" for short and that the URL to the remote repo is "https://github.com/yourusername/reponame.git", the same URL we used when we cloned the repo to your local computer
+You should see that your remote repo is called "origin" for short and that the URL to the remote repo is github.com/yourusername/reponame.git, the same URL we used when we cloned the repo to your local computer
 
 b. Push your local changes to your remote repo on your Github account with<br>
 ```git push origin```
@@ -132,7 +132,7 @@ b. Push your local changes to your remote repo on your Github account with<br>
 c. Go back to your repo on Github and refresh the page. You should see your new files appear now on Github
 <br><br>
 
-#### Step 5: Make a Pull Request to the Original Repo (request that your changes be incorporated into the original repo)
+#### Step 5: Make a Pull Request (request that your changes be incorporated into the original repo)
 
 a. To add your repo changes into the original repo at kerriegeil/Spoon-Knife, navigate back to that original repo page
 
@@ -148,47 +148,63 @@ b. Now submit a pull request. You are requesting that kerriegeil incorporate (or
 
 ### A Workflow Starting From the Command Line
 Sometimes you'll want to start a brand new local repo right from the command line and then push your local repo up to Github. Here's how to do it.
+<br>
 
-Step 1: Initialize a new local git repository
-a. Create a new local directory where you want your new local repo to live and navigate into it
-```mkdir my_new_repo```
+#### Step 1: Initialize a New Local Git Repo
+
+a. Create a new local directory where you want your new local repo to live and navigate into it<br>
+```mkdir my_new_repo```<br>
 ```cd my_new_repo```
-b. Initialize a new local git repository
+
+b. Initialize a new local git repository<br>
 ```git init```
+<br><br>
 
-Step 2: Edit away!
-adding content to your local repo is the exact same process as Step 3 in the previous workflow
+#### Step 2: Edit away!
 
-Step 3: create a remote repo on Github and push your local repo up to your Github repo
+Adding content to your local repo is the exact same process as Step 3 in the previous workflow
+<br><br>
+
+#### Step 3: Create a Remote Repo on Github and Push Your Local Repo Up to Your Github Repo
+
 a. login to your Github account
+
 b. navigate to your repositories page, click the green New button
+
 c. give your new Github repo the same name my_new_repo
+
 d. you can skip the section about creating a readme, license, gitignore because you'll be importing an existing repo
-e. follow the instructions to push an existing repo from the command line
-  - ```git remote add origin https://github.com/yourusername/my_new_repo.git```
-  - ``git push origin```
+
+e. follow the instructions to push an existing repo from the command line<br>
+```git remote add origin https://github.com/yourusername/my_new_repo.git```<br>
+```git push origin```
+
 f. refresh your Github repo page, you should see all your local files now in your Github repo
 
+<br><br>
 
-
-### Additional Git commands:
+### Additional Git commands
 
 **always git pull**
-If you are collaborating with someone on Github it is good practice to pull down any changes from the main repo to your local repo every time you begin working on your local repo. This way you can avoid merge conflicts later. If you have the remote repo that you are collaborating on set to "origin" you can simply type the following to fetch and merge remote changes to your local repo:
+
+If you are collaborating with someone on Github it is good practice to pull down any changes from the main repo to your local repo every time you begin working on your local repo. This way you can avoid merge conflicts later. If you have "origin"  set to the remote repo that you are collaborating on then you can simply type the following to fetch and merge remote changes into your local repo:<br>
 ```git pull```
 
 **access repo commit history**
-There are two ways to see every available snapshot of your repo (history of commits). On Github in your repo, click the commits link located right under the green Code button. From the command line:
-```git log```
-We won't cover how to revert your repo to a previous commit in this tutorial but you should know that commit number you see on Github commits or in the git log output at the command line is what you need to access an earlier version of your repo.
+
+There are two ways to see every available snapshot of your repo (history of commits). On Github in your repo, click the commits link located right under the green Code button. From the command line:<br>
+```git log```<br>
+We won't cover how to revert your repo to a previous commit in this tutorial but you should know that commit number you see on Github commits or in the ```git log``` output at the command line is what you need to access an earlier version of your repo.
 
 **create and switch to a new branch**
-If you need a new isolated area to experiment with changes to your code without affecting your codes on the deafault Master branch, create a new branch and switch to it with
-```git checkout -b new_branch_name```
-```git branch``` should show all your branches and which branch you are currently on
-``` git checkout master``` to switch back to your Master branch
+
+If you need a new isolated area to experiment with changes to your code without affecting your codes on the deafault Master branch, create a new branch and switch to it with<br>
+```git checkout -b new_branch_name```<br>
+```git branch``` should show all your branches and which branch you are currently on<br>
+``` git checkout master``` to switch back to your Master branch<br>
 Note: from the command line creating a new branch does not create a new folder in your repo directory. Be careful to always be aware of which branch you are working on- from the command line it is not obvious.
 
+<br><br>
 
 # Conda
 
