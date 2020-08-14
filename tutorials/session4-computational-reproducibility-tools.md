@@ -106,16 +106,6 @@ b. Now submit a pull request. You are requesting that kerriegeil incorporate ("p
   - ensure that the head repository is yourusername/Spoon-Knife and the compare branch is Master (right side of the arrow)
   - click the green Create Pull Request button. The fate of your pull request now lies with the owner of the original repo
 
-Additional workflow tips:
-
-If you are collaborating with someone on Github it is good practice to pull down any changes from the main repo to your local repo every time you begin working on your local repo. This way you can avoid merge conflicts later. If you have the remote repo that you are collaborating on set to "origin" you can simply type the following to fetch and merge remote changes to your local repo:
-```git pull```
-
-There are two ways to see every available snapshot of your repo (history of commits). On Github in your repo, click the commits link located right under the green Code button. From the command line:
-```git log``
-We won't cover how to revert your repo to a previous commit in this tutorial but you should know that commit number you see on Github commits or in the git log output at the command line is what you need to access an earlier version of your repo.
-
-
 
 
 ### A Workflow Starting From the Command Line
@@ -143,7 +133,23 @@ f. refresh your Github repo page, you should see all your local files now in you
 
 
 
+### Additional Git/Github commands:
 
+**always git pull**
+If you are collaborating with someone on Github it is good practice to pull down any changes from the main repo to your local repo every time you begin working on your local repo. This way you can avoid merge conflicts later. If you have the remote repo that you are collaborating on set to "origin" you can simply type the following to fetch and merge remote changes to your local repo:
+```git pull```
+
+**access repo commit history**
+There are two ways to see every available snapshot of your repo (history of commits). On Github in your repo, click the commits link located right under the green Code button. From the command line:
+```git log```
+We won't cover how to revert your repo to a previous commit in this tutorial but you should know that commit number you see on Github commits or in the git log output at the command line is what you need to access an earlier version of your repo.
+
+**create and switch to a new branch**
+If you need a new isolated area to experiment with changes to your code without affecting your codes on the deafault Master branch, create a new branch and switch to it with
+```git checkout -b new_branch_name```
+```git branch``` should show all your branches and which branch you are currently on
+``` git checkout master``` to switch back to your Master branch
+Note: from the command line creating a new branch does not create a new folder in your repo directory. Be careful to always be aware of which branch you are working on- from the command line it is not obvious.
 
 # Conda
 terminology
