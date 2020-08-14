@@ -2,16 +2,18 @@
 
 **Quick Links**
 
-[Git and Github](#git-and-gihub)
+[Git and Github](#git-and-github)
   - [Terminology](#git-terminology)
   - [Using Git & Github to Archive and Version Your Codes](#using-git-and-github-to-archive-and-version-your-codes)
     - [A Workflow Starting from Github](#a-workflow-starting-from-github)
     - [A Workflow Starting from the Command Line](#a-workflow-starting-from-the-command-line)
   - [Additional Git Commands](#additional-git-commands)
+
 [Conda](#conda)
   - [Terminology](#conda-terminology)
   - [Accessing Conda on Ceres](#accessing-conda-on-ceres)
   - [Conda Environments](#conda-environments)
+  
 [Containers (Docker and Singularity)](#containers-docker-and-singularity)
   - [Accessing an Existing Docker Image](#accessing-an-existing-docker-image)
   - [Running a Container on Ceres](#running-a-container-on-ceres)
