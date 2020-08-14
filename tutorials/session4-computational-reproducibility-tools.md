@@ -1,10 +1,25 @@
----
+# Session 4 Tutorial: Computational Reproducibility Tools (Git/Github, Conda, Docker/Singularity containers)
 
----
+**Quick Links**
+[Git and Github](#git-and-gihub)
+  - [Terminology](#git-terminology)
+  - [Using Git & Github to Archive and Version Your Codes](#using-git-and-github-to-archive-and-version-your-codes)
+    - [A Workflow Starting from Github](#a-workflow-starting-from-github)
+    - [A Workflow Starting from the Command Line](#a-workflow-starting-from-the-command-line)
+  - [Additional Git Commands](#additional-git-commands)
+[Conda](#conda)
+  - [Terminology](#conda-terminology)
+  - [Accessing Conda on Ceres](#accessing-conda-on-ceres)
+  - [Conda Environments](#conda-environments)
+[Containers (Docker and Singularity)](#containers-docker-and-singularity)
+  - [Accessing an Existing Docker Image](#accessing-an-existing-docker-image)
+  - [Running a Container on Ceres](#running-a-container-on-ceres)
+  - [Creating a New Docker Image from an Existing Image](#creating-a-new-docker-image-from-an-existing-image)
+
 
 # Git and Github
 
-## Terminology
+## Git Terminology
 
 **Git** - version control software that you use at the command line to keep track of edits to your scientific codes over time.
 
@@ -31,7 +46,7 @@
 **merge** - the process of combining multiple sequences of commits into one unified history. Most often used to incorporate changes from one branch into another. A merge happens when you pull, push, and pull request.
 
 
-## Using Git & Github to Archive and Version Your Codes
+## Using Git and Github to Archive and Version Your Codes
 
 ### A Workflow Starting From Github
 
@@ -133,7 +148,7 @@ f. refresh your Github repo page, you should see all your local files now in you
 
 
 
-### Additional Git/Github commands:
+### Additional Git commands:
 
 **always git pull**
 If you are collaborating with someone on Github it is good practice to pull down any changes from the main repo to your local repo every time you begin working on your local repo. This way you can avoid merge conflicts later. If you have the remote repo that you are collaborating on set to "origin" you can simply type the following to fetch and merge remote changes to your local repo:
@@ -151,8 +166,10 @@ If you need a new isolated area to experiment with changes to your code without 
 ``` git checkout master``` to switch back to your Master branch
 Note: from the command line creating a new branch does not create a new folder in your repo directory. Be careful to always be aware of which branch you are working on- from the command line it is not obvious.
 
+
 # Conda
-terminology
+
+## Conda Terminology
 conda, packages, environment, specfile, yml
 
 ## Accessing Conda on Ceres
@@ -167,7 +184,10 @@ change env
 view envs
 export env to spec file
 
-## 
+## what else
+
+
+
 
 # Containers (Docker and Singularity)
 terminology
