@@ -79,17 +79,18 @@ a. SSH into your Ceres account from a terminal/command line. See the [Ceres Quic
 
 b. Navigate to the location on Ceres where you want to copy the repo. It's small so putting it in your home directory is fine (~/home/username).
 
-c. Go back to Github to get the URL of your Github repo. On your repo page, click the green Code button to find the repo address. It should be in the form github.com/username/reponame.git
+c. Go back to Github to get the URL of your Github repo. On your repo page, click the green Code button to find the repo address. It should be in the form github.com/yourusername/Spoon-Knife.git
 
 d. Back at the command line type the following to make a local copy of your Github repo<br>
-```git clone paste_or_type_the_repo_URL```
+```git clone paste_or_type_the_full_repo_URL_including_https://```
 <br><br>
 
 #### Step 3: Make Changes to Your Local Repo and Make Multiple Commits (git add, git commit)
 
 a. Create some new text files using your name as the file name<br>
-```touch yourname1.txt yourname2.txt yourname3.txt```<br>
-```ls``` to see the files you just created
+```cd Spoon-Knife``` to navigate into your repo<br>
+```touch yourname1.txt yourname2.txt yourname3.txt``` to create some empty text files<br>
+```ls``` to see a list of the files in your repo
 
 b. Check the status of your edits. The changed files should appear as untracked files<br>
 ```git status```
@@ -125,7 +126,8 @@ g. Check the status of the changes. Working directory should now be clean, meani
 
 a. If you want to double check what remote repo(s) is/are associated with your local repo, at the command line type<br>
 ```git remote -v```<br>
-You should see that your remote repo is called "origin" for short and that the URL to the remote repo is github.com/yourusername/reponame.git, the same URL we used when we cloned the repo to your local computer
+
+You should see that your remote repo is called "origin" for short and that the URL to the remote repo is github.com/yourusername/Spoon-Knife.git, the same URL we used when we cloned the repo to your local computer
 
 b. Push your local changes to your remote repo on your Github account with<br>
 ```git push origin```
@@ -143,7 +145,7 @@ b. Now submit a pull request. You are requesting that kerriegeil incorporate (or
   - click the link near the top that says "compare across forks"
   - ensure the base repository is kerriegeil/Spoon-Knife and the base branch is Master (left side of the arrow)
   - ensure that the head repository is yourusername/Spoon-Knife and the compare branch is Master (right side of the arrow)
-  - click the green Create Pull Request button. The fate of your pull request now lies with the owner of the original repo. The will see your pull request and approve/merge your changes to their repo.
+  - click the green Create Pull Request button. The fate of your pull request now lies with the owner of the original repo. They will see your pull request and approve/merge your changes to their repo.
 
 <br>
 
