@@ -20,7 +20,7 @@
 
 **commit** - the process of saving a "snapshot" or versions of your files. Similar to saving a file that's been edited, a commit records your changes to one or more files on a branch. Git assigns each commit a unique ID that indentifies the specific changes, when the changes were made, and who created the changes. When you make a commit, you also attached a short description of the changes you made. It's wise to group similar edits together and include them in a single commit and also to commit your changes every so often so that you have a good number of "snapshots" available to you in case you break your code and need to look back to earlier versions. For example, you could code all day and do one commit at the end of the day and have one snapshot/version of your code, but it may be more useful to commit more often that way you will have multiple snapshots of your work throughout the day that you could revert back to if necessary. 
 
-**staging** - the process of "telling Git" which edited files should be included in each commit that you make. Just because you change a file in your repo does not mean that it will be automatically included in your repo snapshot when you commit. You must first "stage" the edited files so that Git knows how to make the snapshot.
+**stage** - the process of "telling Git" which edited files should be included in each commit that you make. Just because you change a file in your repo does not mean that it will be automatically included in your repo snapshot when you commit. You must first "stage" the edited files so that Git knows how to make the snapshot.
 
 **pull** - the process of updating your local repo to include changes made to the remote (online) repo. You "pull" down any edits from the online repo and merge them into your local repo. 
 
@@ -32,9 +32,122 @@
 
 
 ## Using Git & Github to Archive and Version Your Codes
+
 ### A Workflow Starting From Github
-copy existing repo to SCINet account
-make changes in a series of commits
+
+This example workflow demonstrates how to:
+  - copy an existing Github repo to your own Github account,
+  - make a local copy of your Github repo on your computer (in this case your Ceres account)
+  - make changes to the repo files locally, 
+  - push your local repo changes to your Github repo, and 
+  - have your repo edits incorporated back into the online repo that you originally copied from on Github. 
+
+
+Step 1: Fork a Github repo (on Github, copy an existing Github repo to your own Github account)
+a. Login to [Github](https://github.com/) with your username and password.
+b. Find the Github repo that you want to copy. Let's copy the repo called "Spoon-Knife" on Kerrie Geil's Github page.
+  - In the black Github search bar at the top left where it says "Search or jump to", type kerriegeil, and select the dropdown list option that says search kerriegeil All Github.
+  - On the bottom of the resulting menu click Users, then click Kerrie Geil on the right to see all the public repos on her account.
+  - Click on the Spoon-Knife repo. You should be here: https://github.com/kerriegeil/Spoon-Knife.
+c. Click Fork on the top right of the repo page and then click on your github username when you are asked where to fork to. You have now copied the repo to your own account. Notice the URL you are at- it should be github.com/yourusername/reponame
+
+
+Step 2: create a local repo on Ceres from your Github repo (git clone)
+a. SSH into your Ceres account from a terminal/command line. See the [Ceres Quick Start Guide](https://scinet.usda.gov/guide/quickstart#accessing-scinet) for instructions.
+b. Navigate to the location on Ceres where you want to copy the repo. It's small so putting it in your home directory is fine (~/home/username).
+c. Go back to Github to get the URL of your Github repo. On your repo page, click the green Code button to find the repo address. It should be in the form https://github.com/username/reponame.git
+d. Back at the command line type the following to make a local copy of your Github repo
+```git clone paste_or_type_the_repo_URL```
+
+
+Step 3: make changes to your local repo and make multiple commits to create a series of "snapshots" of your changes (make edits, git add, git commit -m "message")
+a. create some new text files using your name as the file name
+```touch yourname1.txt yourname2.txt yourname3.txt```
+to see the files you just created
+```ls```
+b. check the status of your edits. The changed files should appear as untracked files
+```git status```
+c. stage the edits before committing. You are "telling Git" what files you want to include in a future commit.
+```git add yourname1.txt```
+```git add yourname2.txt yourname3.txt```
+d. check the status of your edits. The changed files should now appear as changes to be committed
+``git status```
+e. commit the edits to include them in a snapshot of your updated local repo
+```git commit -m "create new text files"```
+f. check the status of your edits again. The changed files should no longer appear. If you've committed all your changes you should see "nothing to commit, working directory clean" 
+```git status```
+g. Let's do it again. Edit the file hi-my-name-is.txt to include your name
+```nano hi-my-name-is.txt```
+Type your name, then hit Ctl+O then enter to write, Ctl+X to exit
+h. Stage your edits
+```git add hi-my-name-is.txt```
+f. another commit
+```git commit -m "update with my name"```
+g. check the status of the changes, working directory should now be clean meaning all changes have been committed to an updated "snapshot"
+```git status```
+
+
+Step 4: Push your local changes up to your remote repo on your Github account
+a. if you want to double check what remote repo(s) is/are associated with your local repo, at the command line type
+```git remote -v```
+you should see that your remote repo is called "origin" for short and that the URL to the remote repo is https://github.com/yourusername/reponame.git, the same URL we used when we cloned the repo to your local computer
+b. push your local changes to your remote repo on your Github account with
+```git push origin```
+c. Go back to your repo on Github and refresh the page. You should see your new files appear now on Github
+
+
+Step 5: Make a pull request to the original repo (request that your changes be incorporated into the original repo)
+a. To add your repo changes into the original repo at kerriegeil/Spoon-Knife navigate back to that original repo page
+b. Now submit a pull request. You are requesting that kerriegeil incorporate ("pull") your edits into her repo
+  - click the Pull Requests tab
+  - click the green New Pull Request button
+  - click the link near the top that says "compare across forks"
+  - ensure the base repository is kerriegeil/Spoon-Knife and the base branch is Master (left side of the arrow)
+  - ensure that the head repository is yourusername/Spoon-Knife and the compare branch is Master (right side of the arrow)
+  - click the green Create Pull Request button. The fate of your pull request now lies with the owner of the original repo
+
+Additional workflow tips:
+
+If you are collaborating with someone on Github it is good practice to pull down any changes from the main repo to your local repo every time you begin working on your local repo. This way you can avoid merge conflicts later. If you have the remote repo that you are collaborating on set to "origin" you can simply type the following to fetch and merge remote changes to your local repo:
+```git pull```
+
+There are two ways to see every available snapshot of your repo (history of commits). On Github in your repo, click the commits link located right under the green Code button. From the command line:
+```git log``
+We won't cover how to revert your repo to a previous commit in this tutorial but you should know that commit number you see on Github commits or in the git log output at the command line is what you need to access an earlier version of your repo.
+
+
+
+
+
+Step 1: copy an existing Github repo to your local computer (in this case your Ceres HPC account) (git clone)
+
+Find the URL to the Github repo that you want to copy. Usually you are either given this URL or you can get it from Github. Let's copy the repo called "Spoon-Knife" on Kerrie Geil's Github page.
+
+a. Login to [Github](https://github.com/) with your username and password.
+
+b. In the black Github search bar at the top left where it says "Search or jump to", type kerriegeil, and select the dropdown list option that says search kerriegeil All Github.
+
+c. On the bottom of the resulting menu click Users, then click Kerrie Geil on the right to see all the public repos on her account.
+
+d. Click on the Spoon-Knife repo. Then click on the green button that says Code and copy the URL to the repo by clicking on the clipboard icon. The link should be [https://github.com/kerriegeil/Spoon-Knife](https://github.com/kerriegeil/Spoon-Knife).
+
+e. SSH into your Ceres account from a terminal/command line. See the [Ceres Quick Start Guide](https://scinet.usda.gov/guide/quickstart#accessing-scinet) for instructions.
+
+f. Navigate to the location on Ceres where you want to copy the repo. It's small so putting it in your home directory is fine (~/home/username).
+
+g. Copy the repo to your current location on Ceres by typing
+
+```git clone paste_or_type_the_repo_URL```
+
+
+
+
+Step 3: push your local repo to an online remote repo on your github account
+
+a. navigate to your github account homepage, click the repositories tab, click the green New button
+
+
+
 push repo online
 pull request
 
