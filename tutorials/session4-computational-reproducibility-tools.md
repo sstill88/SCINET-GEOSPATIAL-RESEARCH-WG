@@ -59,7 +59,7 @@ This example workflow demonstrates how to:
   - push your local repo changes to your Github repo (Step 4), and 
   - have your repo edits incorporated back into the online repo that you originally copied from on Github (Step 5). 
 
-
+<br>
 #### Step 1: Fork a Github Repo (on Github, copy an existing Github repo to your own Github account)
 
 a. Login to [Github](https://github.com/) with your username and password.
@@ -71,7 +71,7 @@ b. Find the Github repo that you want to copy. Let's copy the repo called "Spoon
   
 c. Click Fork on the top right of the repo page and then click on your github username when you are asked where to fork to. You have now copied the repo to your own account. Notice the URL you are at- it should be github.com/yourusername/reponame
 
-
+<br>
 #### Step 2: Create a Local Repo on Ceres From Your Github Repo (git clone)
 
 a. SSH into your Ceres account from a terminal/command line. See the [Ceres Quick Start Guide](https://scinet.usda.gov/guide/quickstart#accessing-scinet) for instructions.
@@ -83,7 +83,7 @@ c. Go back to Github to get the URL of your Github repo. On your repo page, clic
 d. Back at the command line type the following to make a local copy of your Github repo<br>
 ```git clone paste_or_type_the_repo_URL```
 
-
+<br>
 #### Step 3: Make Changes to Your Local Repo and Make Multiple Commits to Create a Series of "Snapshots" of Your Changes (make edits, git add, git commit -m "message")
 
 a. Create some new text files using your name as the file name<br>
@@ -119,7 +119,7 @@ f. Another commit<br>
 g. Check the status of the changes. Working directory should now be clean, meaning all changes have been committed to an updated "snapshot"<br>
 ```git status```
 
-
+<br>
 #### Step 4: Push Your Local Changes Up to Your Remote Repo on Rour Github Account
 
 a. If you want to double check what remote repo(s) is/are associated with your local repo, at the command line type<br>
@@ -131,7 +131,7 @@ b. Push your local changes to your remote repo on your Github account with<br>
 
 c. Go back to your repo on Github and refresh the page. You should see your new files appear now on Github
 
-
+<br>
 #### Step 5: Make a Pull Request to the Original Repo (request that your changes be incorporated into the original repo)
 
 a. To add your repo changes into the original repo at kerriegeil/Spoon-Knife, navigate back to that original repo page
@@ -145,7 +145,7 @@ b. Now submit a pull request. You are requesting that kerriegeil incorporate (or
   - click the green Create Pull Request button. The fate of your pull request now lies with the owner of the original repo. The will see your pull request and approve/merge your changes to their repo.
 
 
-
+<br>
 ### A Workflow Starting From the Command Line
 Sometimes you'll want to start a brand new local repo right from the command line and then push your local repo up to Github. Here's how to do it.
 
