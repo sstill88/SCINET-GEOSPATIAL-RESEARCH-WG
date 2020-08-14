@@ -70,7 +70,7 @@ b. Find the Github repo that you want to copy. Let's copy the repo called "Spoon
   - Click on the Spoon-Knife repo. You should be here: https://github.com/kerriegeil/Spoon-Knife.
   
 c. Click Fork on the top right of the repo page and then click on your github username when you are asked where to fork to. You have now copied the repo to your own account. Notice the URL you are at- it should be github.com/yourusername/reponame
-<br>
+<br><br>
 
 #### Step 2: Create a Local Repo on Ceres From Your Github Repo (git clone)
 
@@ -82,7 +82,7 @@ c. Go back to Github to get the URL of your Github repo. On your repo page, clic
 
 d. Back at the command line type the following to make a local copy of your Github repo<br>
 ```git clone paste_or_type_the_repo_URL```
-<br>
+<br><br>
 
 #### Step 3: Make Changes to Your Local Repo and Make Multiple Commits to Create a Series of "Snapshots" of Your Changes (make edits, git add, git commit -m "message")
 
@@ -118,7 +118,7 @@ f. Another commit<br>
 
 g. Check the status of the changes. Working directory should now be clean, meaning all changes have been committed to an updated "snapshot"<br>
 ```git status```
-<br>
+<br><br>
 
 #### Step 4: Push Your Local Changes Up to Your Remote Repo on Rour Github Account
 
@@ -130,7 +130,7 @@ b. Push your local changes to your remote repo on your Github account with<br>
 ```git push origin```
 
 c. Go back to your repo on Github and refresh the page. You should see your new files appear now on Github
-<br>
+<br><br>
 
 #### Step 5: Make a Pull Request to the Original Repo (request that your changes be incorporated into the original repo)
 
