@@ -78,55 +78,55 @@ a. SSH into your Ceres account from a terminal/command line. See the [Ceres Quic
 
 b. Navigate to the location on Ceres where you want to copy the repo. It's small so putting it in your home directory is fine (~/home/username).
 
-c. Go back to Github to get the URL of your Github repo. On your repo page, click the green Code button to find the repo address. It should be in the form https://github.com/username/reponame.git
+c. Go back to Github to get the URL of your Github repo. On your repo page, click the green Code button to find the repo address. It should be in the form "https://github.com/username/reponame.git"
 
-d. Back at the command line type the following to make a local copy of your Github repo
+d. Back at the command line type the following to make a local copy of your Github repo<br>
 ```git clone paste_or_type_the_repo_URL```
 
 
 #### Step 3: Make Changes to Your Local Repo and Make Multiple Commits to Create a Series of "Snapshots" of Your Changes (make edits, git add, git commit -m "message")
 
-a. Create some new text files using your name as the file name
-```touch yourname1.txt yourname2.txt yourname3.txt```
+a. Create some new text files using your name as the file name<br>
+```touch yourname1.txt yourname2.txt yourname3.txt```<br>
 ```ls``` to see the files you just created
 
-b. Check the status of your edits. The changed files should appear as untracked files
+b. Check the status of your edits. The changed files should appear as untracked files<br>
 ```git status```
 
-c. Stage the edits before committing. You are "telling Git" what files you want to include in a future commit.
-```git add yourname1.txt```
+c. Stage the edits before committing. You are "telling Git" what files you want to include in a future commit.<br>
+```git add yourname1.txt```<br>
 ```git add yourname2.txt yourname3.txt```
 
-d. Check the status of your edits. The changed files should now appear as changes to be committed
+d. Check the status of your edits. The changed files should now appear as changes to be committed<br>
 ```git status```
 
-e. Commit the edits to include them in a snapshot of your updated local repo
+e. Commit the edits to include them in a snapshot of your updated local repo<br>
 ```git commit -m "create new text files"```
 
-f. Check the status of your edits again. The changed files should no longer appear in the status output. If you've committed all your changes you should see "nothing to commit, working directory clean" 
+f. Check the status of your edits again. The changed files should no longer appear in the status output. If you've committed all your changes you should see "nothing to commit, working directory clean"<br> 
 ```git status```
 
-g. Let's do it again. Edit the file hi-my-name-is.txt to include your name
-```nano hi-my-name-is.txt``` then type your name, hit Ctl+O then enter to write, Ctl+X to exit
+g. Let's do it again. Edit the file hi-my-name-is.txt to include your name<br>
+```nano hi-my-name-is.txt``` <br>
+then type your name, hit Ctl+O then enter to write, Ctl+X to exit
 
-h. Stage your edits
+h. Stage your edits<br>
 ```git add hi-my-name-is.txt```
 
-f. Another commit
+f. Another commit<br>
 ```git commit -m "update with my name"```
 
-g. Check the status of the changes. Working directory should now be clean, meaning all changes have been committed to an updated "snapshot"
+g. Check the status of the changes. Working directory should now be clean, meaning all changes have been committed to an updated "snapshot"<br>
 ```git status```
 
 
 #### Step 4: Push Your Local Changes Up to Your Remote Repo on Rour Github Account
 
-a. If you want to double check what remote repo(s) is/are associated with your local repo, at the command line type
-```git remote -v```
+a. If you want to double check what remote repo(s) is/are associated with your local repo, at the command line type<br>
+```git remote -v```<br>
+You should see that your remote repo is called "origin" for short and that the URL to the remote repo is "https://github.com/yourusername/reponame.git", the same URL we used when we cloned the repo to your local computer
 
-You should see that your remote repo is called "origin" for short and that the URL to the remote repo is https://github.com/yourusername/reponame.git, the same URL we used when we cloned the repo to your local computer
-
-b. Push your local changes to your remote repo on your Github account with
+b. Push your local changes to your remote repo on your Github account with<br>
 ```git push origin```
 
 c. Go back to your repo on Github and refresh the page. You should see your new files appear now on Github
