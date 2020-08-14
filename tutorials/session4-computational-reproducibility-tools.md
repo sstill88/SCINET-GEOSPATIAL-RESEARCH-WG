@@ -56,9 +56,10 @@
 This example workflow demonstrates how to:
   - copy an existing Github repo to your own Github account [(Step 1)](#step-1-fork-a-github-repo-on-github-copy-an-existing-github-repo-to-your-own-github-account),
   - make a local copy of your Github repo on your computer, in this case your Ceres account [(Step 2)](#step-2-create-a-local-repo-on-ceres-from-your-github-repo-git-clone)
-  - make changes to the repo files locally [(Step 3)](#step-3-make-changes-to-your-local-repo-and-make-multiple-commits-to-create-a-series-of-snapshots-of-your-changes-make-edits-git-add-git-commit-m-message), 
+  - make changes to the repo files locally [(Step 3)](#step-3-make-changes-to-your-local-repo-and-make-multiple-commits-to-create-a-series-of-snapshots-of-your-changes-make-edits-git-add-git-commitm-message), 
   - push your local repo changes to your Github repo [(Step 4)](#step-4-push-your-local-changes-up-to-your-remote-repo-on-your-github-account), and 
-  - have your repo edits incorporated back into the online repo that you originally copied from on Github [(Step 5)](#step-5-make-a-pull-request-request-that-your-changes-be incorporated-into-the-original-repo). 
+  - have your repo edits incorporated back into the online repo that you originally copied from on Github [(Step 5)](#step-5-make-a-pull-request-request-that-your-changes-be incorporated-into-the-original-repo).
+  
 <br>
 
 #### Step 1: Fork a Github Repo (on Github, copy an existing Github repo to your own Github account)
@@ -208,6 +209,7 @@ If you need a new isolated area to experiment with changes to your code without 
 Note: from the command line creating a new branch does not create a new folder in your repo directory. Be careful to always be aware of which branch you are working on- from the command line it is not obvious.
 
 <br><br>
+---
 
 # Conda
 
@@ -228,7 +230,7 @@ export env to spec file
 
 ## what else
 
-
+---
 
 
 # Containers (Docker and Singularity)
