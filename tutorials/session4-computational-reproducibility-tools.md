@@ -13,6 +13,7 @@
   - [Conda Environments](#conda-environments)
   
 [Containers (Docker and Singularity)](#containers-docker-and-singularity)
+  - [Terminology](#container-terminology)
   - [Accessing an Existing Docker Image](#accessing-an-existing-docker-image)
   - [Running a Container on Ceres](#running-a-container-on-ceres)
   - [Creating a New Docker Image from an Existing Image](#creating-a-new-docker-image-from-an-existing-image)
@@ -46,7 +47,7 @@
 **PULL REQUEST** - the process of requesting that changes you have made to your repo branch be incorportated into someone else's version of the repo. For example, you fork (copy) someone's existing Github repo to a repo on your own Github account and you then make changes to some of the files. If you want the original repo that you copied from to incorporate your changes into their repo, then you would make a pull request. It is called a pull request because you are requesting that someone else pulls and merges your edits into their online repo.
 
 **MERGE** - the process of combining multiple sequences of commits into one unified history. Most often used to incorporate changes from one branch into another. A merge happens when you pull, push, and pull request.
-<br>
+<br><br>
 
 ## Using Git and Github to Archive and Version Your Codes
 
@@ -54,10 +55,10 @@
 
 This example workflow demonstrates how to:
   - copy an existing Github repo to your own Github account [(Step 1)](#step-1-fork-a-github-repo-on-github-copy-an-existing-repo-to-your-own-github-account),
-  - make a local copy of your Github repo on your computer, in this case your Ceres account (Step 2)
-  - make changes to the repo files locally (Step 3), 
-  - push your local repo changes to your Github repo (Step 4), and 
-  - have your repo edits incorporated back into the online repo that you originally copied from on Github (Step 5). 
+  - make a local copy of your Github repo on your computer, in this case your Ceres account [(Step 2)](#step-2-create-a-local-repo-on-ceres-from-your-github-repo-git-clone)
+  - make changes to the repo files locally [(Step 3)](#step-3-make-changes-to-your-local-repo-and-make-multiple-commits-to-create-a-series-of-snapshots-of-your-changes-make-edits-git-add-git-commit-m-message), 
+  - push your local repo changes to your Github repo [(Step 4)](#step-4-push-your-local-changes-up-to-your-remote-repo-on-your-github-account), and 
+  - have your repo edits incorporated back into the online repo that you originally copied from on Github [(Step 5)](#step-5-make-a-pull-request-request-that-your-changes-be incorporated-into-the-original-repo). 
 <br>
 
 #### Step 1: Fork a Github Repo (on Github, copy an existing Github repo to your own Github account)
@@ -120,7 +121,7 @@ g. Check the status of the changes. Working directory should now be clean, meani
 ```git status```
 <br><br>
 
-#### Step 4: Push Your Local Changes Up to Your Remote Repo on Rour Github Account
+#### Step 4: Push Your Local Changes Up to Your Remote Repo on Your Github Account
 
 a. If you want to double check what remote repo(s) is/are associated with your local repo, at the command line type<br>
 ```git remote -v```<br>
@@ -167,19 +168,19 @@ Adding content to your local repo is the exact same process as Step 3 in the pre
 
 #### Step 3: Create a Remote Repo on Github and Push Your Local Repo Up to Your Github Repo
 
-a. login to your Github account
+a. Login to your Github account
 
-b. navigate to your repositories page, click the green New button
+b. Navigate to your repositories page, click the green New button
 
-c. give your new Github repo the same name my_new_repo
+c. Give your new Github repo the same name my_new_repo
 
-d. you can skip the section about creating a readme, license, gitignore because you'll be importing an existing repo
+d. You can skip the section about creating a readme, license, gitignore because you'll be importing an existing repo
 
-e. follow the instructions to push an existing repo from the command line<br>
+e. Follow the instructions to push an existing repo from the command line<br>
 ```git remote add origin https://github.com/yourusername/my_new_repo.git```<br>
 ```git push origin```
 
-f. refresh your Github repo page, you should see all your local files now in your Github repo
+f. Refresh your Github repo page, you should see all your local files now in your Github repo
 
 <br><br>
 
@@ -193,7 +194,8 @@ If you are collaborating with someone on Github it is good practice to pull down
 **access repo commit history**
 
 There are two ways to see every available snapshot of your repo (history of commits). On Github in your repo, click the commits link located right under the green Code button. From the command line:<br>
-```git log```<br>
+```git log```
+
 We won't cover how to revert your repo to a previous commit in this tutorial but you should know that commit number you see on Github commits or in the ```git log``` output at the command line is what you need to access an earlier version of your repo.
 
 **create and switch to a new branch**
@@ -202,6 +204,7 @@ If you need a new isolated area to experiment with changes to your code without 
 ```git checkout -b new_branch_name```<br>
 ```git branch``` should show all your branches and which branch you are currently on<br>
 ``` git checkout master``` to switch back to your Master branch<br>
+
 Note: from the command line creating a new branch does not create a new folder in your repo directory. Be careful to always be aware of which branch you are working on- from the command line it is not obvious.
 
 <br><br>
@@ -229,7 +232,8 @@ export env to spec file
 
 
 # Containers (Docker and Singularity)
-terminology
+
+## Container Terminology
 image, container, Docker, DockerHub dockerfile, Singularity
 
 ## Accessing an Existing Docker Image
