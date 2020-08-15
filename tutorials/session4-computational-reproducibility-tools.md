@@ -8,11 +8,11 @@
     - [A Workflow Starting from the Command Line](#a-workflow-starting-from-the-command-line)
   - [Additional Git Commands](#additional-git-commands)
 
-[Conda](#conda)
+[Anaconda (Conda)](#anaconda-conda)
   - [Why Use Conda?](#why-use-conda)
   - [Terminology](#conda-terminology)
   - [Accessing Conda on Ceres](#accessing-conda-on-ceres)
-  - [Conda Environments](#conda-environments)
+  - [Using Conda Environments to Create Isolated Software Workspaces](#using-conda-environments-to-create-isolated-software-workspaces)
   
 [Containers (Docker and Singularity)](#containers-docker-and-singularity)
   - [Why Use Containers?](#why-use-containers)
@@ -219,26 +219,143 @@ Note: from the command line creating a new branch does not create a new folder i
 
 ---
 
-# Conda
+# Anaconda (Conda)
 
 ## Why Use Conda?
+Conda is not only a tool that allows Ceres users to install software themselves on the HPC system, but it is awesome for reproducibility. 
+
+Conda allows you to keep track of exactly what software (and all of the many dependencies) you are using to execute your scientific codes. This is very handy to know, especially if a software package update ends up breaking your code! You are able to save your entire software environment and recreate it any time you want if something goes wrong.
+
+Conda also let's you run separate instances of the same software, for example, maybe you have 1 project where you use Python 2 and another where you use Python 3. Conda allows you to make isolated software environments for your projects so you can run the software you need for each project without conflicts.
 
 ## Conda Terminology
-conda, packages, environment, specfile, yml
+
+**[CONDA](https://docs.conda.io/en/latest/)** - an open source software package management and environment management system that runs on Windows, Mac, and Linux. Conda can find, install, run, and update software packages and their dependencies as well as create, save, and load software environments on your computer. It was created for Python programs, but it can package and distribute software for any language.
+
+**PACKAGES** - pieces of software and their dependencies
+
+**DEPENDENCIES** - pieces of software that are require for other software to run successfully
+
+**ENVIRONMENT** - a conda software environment is a directory that contains a specific collection of conda packages that you have installed. It is isolated from your other conda environments such that when you change one environment, your other environments are not affected. 
+
+**ACTIVATE** - the process of "entering" a specific conda environment. When you activate an environment you are telling Conda which isolated set of software packages to use to execute your codes.
+
+**SPECIFICATION FILE** - a text file that lists every single package that's in a specific environment, including the packages that are specific to the operating system you are running on. A specfile can be used to recreate an environment. The file tells you what operating system you can recreate the environment on.
+
+**YML** - another type of file that contains information that can be used to recreate an environment. Operating system-specific packages can be excluded from a yml file in order to recreate similar environments across different operating systems. 
+<br><br>
 
 ## Accessing Conda on Ceres
+Conda is available on Ceres without users having to install it themselves. Actually, it's recommended that users NOT install Conda themselves. Conda can be accessed through the software module system or by logging into the system using JupyterHub as described below. See also the [Guide to User-Installed Software on Ceres with Conda](https://scinet.usda.gov/guide/conda/) on the SCINet website.
+<br>
+
 ### From the Module System
-### User Install
+After SSHing into Ceres, it is easy to load Conda from the software module system.<br>
+```module load miniconda```
 
-## Conda Environments
-create
-install
-view packages
-change env
-view envs
-export env to spec file
+At the time of this writing, the default Conda on Ceres is miniconda/4.7.12.
 
-## what else
+You will then want to immediately issue the following command which will put you in the base environment:<br>
+```source activate```
+
+Note: If you forget to ```source activate``` and later try to ```conda activate my_env```, you will get a command not found error and will be instructed to ```conda init```. Despite the standard output instructions, **DO NOT EVER TYPE ```conda init``` ON THE CERES HPC**. It will make a permanent modification to your $PATH that doesn't play nice with the software module system or with Jupyter. If you accidentally ```conda init``` you will have to modify your .bashrc file to remove any conda initialization info. See the section of the [Guide to User-Installed Software on Ceres with Conda](https://scinet.usda.gov/guide/conda/) highlighted in red for more detail about how to fix your .bashrc in this case.
+
+After you ```source activate``` and are placed in the base environment, you will then be able to ```conda activate my_env``` with no problems.
+
+
+### From JuptyerHub
+When using JupyterHub to login to Ceres you will also have access to Conda.
+
+
+#### JupyterHub login with no container
+If you login to Ceres with JupyterHub and are not using a container, you will automatically have access to Conda- no need to load the module. At the time of this writing the default is miniconda/3.6. The Conda version shouldn't really matter, but if you run into problems with this older version you can always open a terminal in JupyterLab and execute the same commands as in the above section [From the Module System](#from-the-module-system) to load a more up-to-date Conda version from the software module system. 
+
+#### JupyterHub login with a container
+
+<br><br>
+
+## Using Conda Environments to Create Isolated Software Workspaces
+
+**The best practice for using Conda is to never install packages in the base environment**. 
+
+One reason for this is because the base environment is a dynamic space that changes with Conda version updates whereas your other environments are isolated. You should create at least one other environment to install packages in. A better practice is to create a separate environment for each one of your projects. It's much easier to update certain software packages in your environments if your projects each have their own "sandbox". In addition, on Ceres you'll want to save the environments you create in your home directory or in your project /KEEP directory, whereas the base environment lives outside of your personal user account. 
+
+At this point you should be logged in to your Ceres home directory preferably by using JupyterHub (with no container) and have opened a terminal in JupyterLab. You could also SSH in and load the miniconda module as described in the [From the Module System](#from-the-module-system) section above, but the remainder of the tutorial will assume you logged in from JupyterHub.
+
+Many of the environments that we as geospatial researches build contain enough software packages that the environment will take up multiple GBs of storage space. Because our environments are generally large, they take a while to build. **The best practice for creating Conda environments on Ceres is to first open an interactive compute session (i.e. don't create/remove environments or install packages on the login node).**
+
+
+#### Create an New Environment
+
+In this tutorial we will create an environment that you can run the Session 3 Tutorial with in JupyterLab.<br>
+```salloc``` to open an interactive compute session. You are now on a compute node as opposed to the login node.<br>
+```source activate``` to get into the base environment<br>
+
+Create a new environment with ```conda create --name environment_name package1 package2 package3```.<br> 
+```conda create --name session3_env python=3.7 numpy dask dask-jobqueue```
+
+Make sure you hit enter when Conda asks if you want to proceed. This build will likely take about 5 minutes.
+
+#### View all Environments
+
+When the build is finished and your command prompt returns, view all your environments with:<br>
+```conda env list```
+
+#### Activate an Environment and Install More Software
+
+To activate your new environment<br>
+```conda activate session3_env```
+
+To access this environment in JupyterLab you will need to install the ipykernel package. We could have done this with our ```conda create``` but are doing it after the fact to demonstrate how to add additional packages into an existing environment. Make sure your session3_env is activated and<br>
+```conda install ipykernel -y``` notice how the -y allows you to bypass the "proceed ([y]/n)?"
+
+#### Change or Deactivate an Environment
+
+To change environments<br>
+```conda activate base``` will switch you to another environment, in this case the base environment<br>
+or <br>
+```conda deactivate``` will switch you back to whichever environment you were in previously
+
+#### View Software in an Environment
+
+To view all the packages in the active environment<br>
+```conda list```
+
+#### Export the Environment Software List to a Specification File
+
+Create a specification file that lists every single software package that's in an environment, including the packages that are specific to the operating system you are running on. You can save this file wherever you want. Here we'll save it in the Conda envs folder where the rest of your environment information lives.<br>
+```conda list --explicit > ~/.conda/envs/session3_env_spec_file.txt```
+
+View the file you just made<br>
+```cat ~/.conda/envs/session3_env_spec_file.txt```
+
+Notice at the very top of the file there are instructions for recreating the environment from this file, we'll cover this shortly. It also tells you what operating system you can recreate the environment on, in our case you can recreate this environment on 64-bit linux platforms. Recreating the environment on other platforms will likely not work.
+
+#### Delete an Environment and Recreate from a Specification File
+
+Let's say you run out of space to store all your environments. No problem, as long as you have a specification file that lists the environment software, you can go ahead and delete your environment because you'll be able to recreate it anytime.<br>
+```conda env remove --name session3_env```
+
+You can recreate the environment on the same machine you deleted it from<br>
+```conda create --name session3_env --file ~/.conda/envs/session3_env_spec_file.txt```
+
+#### Export the Environment Across OS Platforms
+
+To use an environment across different operating systems you need create a yml file with a list of software that excludes all the OS-specific software in the environment and only includes the major software packages (without all the dependencies). For our session3_env this means the packages we explicitly installed: python 3.7, numpy, dask, dask-jobqueue, ipykernel.<br>
+```conda env export --from-history > ~/.conda/envs/session3_env.yml```
+
+View the file you just made<br>
+```cat ~/.conda/envs/session3_env.yml```
+
+As with the specification file we made earlier, you can use this yml file to recreate your environment on the same machine or to create a similar environment on another machine running a different operating system. This means you can share this yml with other scientists too. Note if there is a --prefix line in your yml file you'll need to modify that if recreating on a different machine. Note: this isn't a 100% foolproof method of getting your codes to run across different platforms because some software just isn't fully supported on all operating systems. Being able to run your codes successully across operating systems is the major benefit of using containers, which we will cover next.
+
+#### Running the Session 3 Tutorial with Your New Environment
+
+During the Session 3 Tutorial we ran the tutorial in a container that already contained all the necessary software but use of a container wasn't totally necessary. The session3_env Conda environment we have created also contains all the software needed to run it.
+
+To run the Session3 Tutorial using your new session3_env Conda environment, navigate in JupyterLab to where you saved the Session 3 .ipynb file. If you didn't participate in Session 3, go to the [workshop website tutorial page](https://kerriegeil.github.io/SCINET-GEOSPATIAL-RESEARCH-WG/content/2-tutorials.html) for instructions on how to download the .ipynb file.
+
+Once you have the Session 3 Jupyter notebook open, on the top right of the notebook you should be able to click to select a Kernel. In the Select Kernel window that pops up choose you session3_env from the dropdown list and then click Select. You are now running the Jupyter notebook in your session3_env Conda environment.
 
 <br><br>
 
