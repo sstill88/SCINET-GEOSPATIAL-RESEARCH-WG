@@ -283,7 +283,7 @@ One reason for this is because the base environment is a dynamic space that chan
 At this point you should be logged in to your Ceres home directory preferably by using JupyterHub (with no container) and have opened a terminal in JupyterLab. You could also SSH in and load the miniconda module as described in the [From the Module System](#from-the-module-system) section above, but the remainder of the tutorial will assume you logged in from JupyterHub.
 
 Many of the environments that we as geospatial researches build contain enough software packages that the environment will take up multiple GBs of storage space. Because our environments are generally large, they take a while to build. **The best practice for creating Conda environments on Ceres is to first open an interactive compute session (i.e. don't create/remove environments or install packages on the login node).**
-<br>
+<br><br>
 
 ### The Conda Basics
 
@@ -297,11 +297,13 @@ Create a new environment with ```conda create --name environment_name package1 p
 ```conda create --name session3_env python=3.7 numpy dask dask-jobqueue```
 
 Make sure you hit enter when Conda asks if you want to proceed. This build will likely take about 5 minutes.
+<br><br>
 
 #### View all Environments
 
 When the build is finished and your command prompt returns, view all your environments with:<br>
 ```conda env list```
+<br><br>
 
 #### Activate an Environment and Install More Software
 
@@ -310,6 +312,7 @@ To activate your new environment<br>
 
 To access this environment in JupyterLab you will need to install the ipykernel package. We could have done this with our ```conda create``` but are doing it after the fact to demonstrate how to add additional packages into an existing environment. Make sure your session3_env is activated and<br>
 ```conda install ipykernel -y``` notice how the -y allows you to bypass the "proceed ([y]/n)?"
+<br><br>
 
 #### Change or Deactivate an Environment
 
@@ -317,11 +320,13 @@ To change environments<br>
 ```conda activate base``` will switch you to another environment, in this case the base environment<br>
 or <br>
 ```conda deactivate``` will switch you back to whichever environment you were in previously
+<br><br>
 
 #### View Software in an Environment
 
 To view all the packages in the active environment<br>
 ```conda list```
+<br><br>
 
 #### Export the Environment Software List to a Specification File
 
@@ -332,6 +337,7 @@ View the file you just made<br>
 ```cat ~/.conda/envs/session3_env_spec_file.txt```
 
 Notice at the very top of the file there are instructions for recreating the environment from this file, we'll cover this shortly. It also tells you what operating system you can recreate the environment on, in our case you can recreate this environment on 64-bit linux platforms. Recreating the environment on other platforms will likely not work.
+<br><br>
 
 #### Delete an Environment and Recreate from a Specification File
 
@@ -340,6 +346,7 @@ Let's say you run out of space to store all your environments. No problem, as lo
 
 You can recreate the environment on the same machine you deleted it from<br>
 ```conda create --name session3_env --file ~/.conda/envs/session3_env_spec_file.txt```
+<br><br>
 
 #### Export the Environment Across OS Platforms
 
@@ -350,6 +357,7 @@ View the file you just made<br>
 ```cat ~/.conda/envs/session3_env.yml```
 
 As with the specification file we made earlier, you can use this yml file to recreate your environment on the same machine. You can also use a yml to create a similar environment on another machine running a different operating system. This means you can share this yml with other scientists too. Note if there is a --prefix line in your yml file you'll need to modify that if recreating on a different machine or in a different file structure (e.g. different Ceres user). Note: this isn't a 100% foolproof method of getting your codes to run across different platforms because some software just isn't fully supported on all operating systems. Being able to run your codes successully across operating systems is the major benefit of using containers, which we will cover in the next segment.
+<br><br>
 
 #### Running the Session 3 Tutorial with Your New Environment
 
@@ -358,6 +366,7 @@ During the Session 3 Tutorial we ran the tutorial in a container that already co
 To run the Session3 Tutorial using your new session3_env Conda environment, navigate in JupyterLab to where you saved the Session 3 .ipynb file. If you didn't participate in Session 3, go to the [workshop website tutorial page](https://kerriegeil.github.io/SCINET-GEOSPATIAL-RESEARCH-WG/content/2-tutorials.html) for instructions on how to download the .ipynb file.
 
 Once you have the Session 3 Jupyter notebook open, on the top right of the notebook you should be able to click to select a Kernel. In the Select Kernel window that pops up choose you session3_env from the dropdown list and then click Select. You are now running the Jupyter notebook in your session3_env Conda environment!
+<br><br>
 
 
 ### Additional Conda Commands
