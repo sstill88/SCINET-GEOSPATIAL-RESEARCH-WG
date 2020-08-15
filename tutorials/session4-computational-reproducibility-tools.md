@@ -6,7 +6,7 @@
   - [Using Git & Github to Archive and Version Your Codes](#using-git-and-github-to-archive-and-version-your-codes)
     - [A Workflow Starting from Github](#a-workflow-starting-from-github)
     - [A Workflow Starting from the Command Line](#a-workflow-starting-from-the-command-line)
-  - [Additional Git Commands](#additional-git-commands)
+    - [Additional Git Commands](#additional-git-commands)
 
 [Anaconda (Conda)](#anaconda-conda)
   - [Why Use Conda?](#why-use-conda)
@@ -192,7 +192,7 @@ f. Refresh your Github repo page, you should see all your local files now in you
 
 <br><br>
 
-### Additional Git commands
+### Additional Git Commands
 
 **always git pull**
 
@@ -284,6 +284,8 @@ At this point you should be logged in to your Ceres home directory preferably by
 
 Many of the environments that we as geospatial researches build contain enough software packages that the environment will take up multiple GBs of storage space. Because our environments are generally large, they take a while to build. **The best practice for creating Conda environments on Ceres is to first open an interactive compute session (i.e. don't create/remove environments or install packages on the login node).**
 
+<br>
+### The Conda Basics
 
 #### Create an New Environment
 
@@ -347,7 +349,7 @@ To use an environment across different operating systems you need create a yml f
 View the file you just made<br>
 ```cat ~/.conda/envs/session3_env.yml```
 
-As with the specification file we made earlier, you can use this yml file to recreate your environment on the same machine or to create a similar environment on another machine running a different operating system. This means you can share this yml with other scientists too. Note if there is a --prefix line in your yml file you'll need to modify that if recreating on a different machine. Note: this isn't a 100% foolproof method of getting your codes to run across different platforms because some software just isn't fully supported on all operating systems. Being able to run your codes successully across operating systems is the major benefit of using containers, which we will cover next.
+As with the specification file we made earlier, you can use this yml file to recreate your environment on the same machine. You can also use a yml to create a similar environment on another machine running a different operating system. This means you can share this yml with other scientists too. Note if there is a --prefix line in your yml file you'll need to modify that if recreating on a different machine or in a different file structure (e.g. different Ceres user). Note: this isn't a 100% foolproof method of getting your codes to run across different platforms because some software just isn't fully supported on all operating systems. Being able to run your codes successully across operating systems is the major benefit of using containers, which we will cover in the next segment.
 
 #### Running the Session 3 Tutorial with Your New Environment
 
@@ -355,7 +357,10 @@ During the Session 3 Tutorial we ran the tutorial in a container that already co
 
 To run the Session3 Tutorial using your new session3_env Conda environment, navigate in JupyterLab to where you saved the Session 3 .ipynb file. If you didn't participate in Session 3, go to the [workshop website tutorial page](https://kerriegeil.github.io/SCINET-GEOSPATIAL-RESEARCH-WG/content/2-tutorials.html) for instructions on how to download the .ipynb file.
 
-Once you have the Session 3 Jupyter notebook open, on the top right of the notebook you should be able to click to select a Kernel. In the Select Kernel window that pops up choose you session3_env from the dropdown list and then click Select. You are now running the Jupyter notebook in your session3_env Conda environment.
+Once you have the Session 3 Jupyter notebook open, on the top right of the notebook you should be able to click to select a Kernel. In the Select Kernel window that pops up choose you session3_env from the dropdown list and then click Select. You are now running the Jupyter notebook in your session3_env Conda environment!
+
+
+### Additional Conda Commands
 
 <br><br>
 
