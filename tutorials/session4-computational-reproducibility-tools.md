@@ -46,9 +46,9 @@ Git and Github greatly improve computational reproducibility by enabling others 
 
 ## Git Terminology
 
-**GIT** - version control software that you use at the command line to keep track of edits to your scientific codes over time.
+**[GIT](https://git-scm.com/)** - version control software that you use at the command line to keep track of edits to your scientific codes over time.
 
-**GITHUB** - an online repository hosting service where you can archive your scientific codes online. You can [create a free personal Github account](https://github.com/join) where you can archive your scientific codes into different “repositories” within your account. If you keep your Github repos up to date, it also allows you (and collaborators) to access your codes from anywhere.
+**[GITHUB](https://github.com/)** - an online repository hosting service where you can archive your scientific codes online. You can [create a free personal Github account](https://github.com/join) where you can archive your scientific codes into different “repositories” within your account. If you keep your Github repos up to date, it also allows you (and collaborators) to access your codes from anywhere.
 
 **REPOSITORY (REPO)** - A directory or storage space where your projects can live. A repo can be a local folder on your laptop/HPC system (local repo) or it can be a storage space on GitHub (online/remote repo). Inside a repo is where you keep your code files, text files, etc. Generally, each of your local repos is also associated with an online Github repo called a "remote" repo.
 
@@ -144,7 +144,7 @@ g. Check the status of the changes. Working directory should now be clean, meani
 ```git status```
 <br><br>
 
-#### Step 4: Push Your Local Changes Up to Your Remote Repo on Your Github Account
+#### Step 4: Push Your Local Changes Up to Your Remote Repo on Your Github Account (git push)
 
 a. If you want to double check what remote repo(s) is/are associated with your local repo, at the command line type<br>
 ```git remote -v```<br>
@@ -227,7 +227,7 @@ We won't cover how to revert your repo to a previous commit in this tutorial but
 If you need a new isolated area to experiment with changes to your code without affecting your codes on the deafault Master branch, create a new branch and switch to it with<br>
 ```git checkout -b new_branch_name```<br>
 ```git branch``` should show all your branches and which branch you are currently on<br>
-``` git checkout master``` to switch back to your Master branch<br>
+```git checkout master``` to switch back to your Master branch<br>
 
 Note: from the command line creating a new branch does not create a new folder in your repo directory. Be careful to always be aware of which branch you are working on- from the command line it is not obvious.
 
@@ -242,7 +242,7 @@ Conda is not only a tool that allows Ceres users to install software themselves 
 
 Conda allows you to keep track of exactly what software (and all of the many dependencies) you are using to execute your scientific codes. This is very handy to know, especially if a software package update ends up breaking your code! You are able to save your entire software environment and recreate it any time you want if something goes wrong.
 
-Conda also let's you run separate instances of the same software, for example, maybe you have 1 project where you use Python 2 and another where you use Python 3. Conda allows you to make isolated software environments for your projects so you can run the software you need for each project without conflicts.
+Conda also let's you run separate instances of the same software, for example, maybe you have one project where you use Python 2 and another where you use Python 3. Conda allows you to make isolated software environments for your projects so you can run the software you need for each project without conflicts.
 
 ## Conda Terminology
 
@@ -282,11 +282,8 @@ After you ```source activate``` and are placed in the base environment, you will
 {% endcapture %}
 {% include alert.md text=text color=warning %}
 
-
-
 ### From JuptyerHub
 When using JupyterHub to login to Ceres you will also have access to Conda.
-
 
 #### JupyterHub login with no container
 If you login to Ceres with JupyterHub and are not using a container, you will automatically have access to Conda- no need to load the module. At the time of this writing the default is miniconda/3.6. 
@@ -319,7 +316,7 @@ One reason for this is because the base environment is a dynamic space that chan
 
 At this point you should be logged in to your Ceres home directory preferably by using JupyterHub (with no container) and have opened a terminal in JupyterLab. You could also SSH in and load the miniconda module as described in the [From the Module System](#from-the-module-system) section above, but the remainder of the tutorial will assume you logged in from JupyterHub.
 
-Many of the environments that we as geospatial researches build contain enough software packages that the environment will take up multiple GBs of storage space. Because our environments are generally large, they take a while to build. **The best practice for creating Conda environments on Ceres is to first open an interactive compute session (i.e. don't create/remove environments or install packages on the login node).**
+Many of the environments that we as geospatial researchers build contain enough software packages that the environment will take up multiple GBs of storage space. Because our environments are generally large, they take a while to build. **The best practice for creating Conda environments on Ceres is to first open an interactive compute session (i.e. don't create/remove environments or install packages on the login node).**
 <br><br>
 
 ### The Conda Basics
