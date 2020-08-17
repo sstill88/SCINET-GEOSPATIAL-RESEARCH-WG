@@ -26,7 +26,23 @@
 # Git and Github
 
 ## Why Use Git/Github?
+"Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source. So regardless of whether you write code that only you will see, or work as part of a team, Git will be useful for you."
 
+\- [nobledesktop.com](https://www.nobledesktop.com/blog/what-is-git-and-why-should-you-use-it#:~:text=Git%20is%20the%20most%20commonly,be%20merged%20into%20one%20source.)
+
+Git and Github may seem excessively complicated, but that is because these tools were created for major software development projects. As research scientists, we can use Git and Github as tools for version control, online back up of our files, collaboration/sharing, and reproducibility by only learning a handful of commands which we will introduce in this tutorial. Once you have these handful of commands down you'll be on your way. Leave the complicated stuff for the software developers to worry about!   
+
+**Version Control**<br>
+Git is a powerful tool for keeping track of edits to your files over time (version control). Using git eliminates the process of saving duplicate codes (e.g., project-code.py, project-code-rev1.py, project-code-rev2.py, project-code-test-this-or-that.py, project-code-latest.py, etc.). We've all done this type of insufficient versioning of our codes and thoroughly confused ourselves or lost track of which code contains which important changes, etc. Git solves this problem. Instead of creating multiple files, Git keeps track of your file changes in a much tidier way by attaching a change message called a "commit" each time you make a major change to your files. A commit is like a snapshot of your code at a point in time and you can revert back to that snapshot any time you want. Git also has a structure called "branches" that allows you to add/test new bits of experimental code inside an existing code you've developed without affecting your existing code file.     
+
+**Backups**<br>
+Github, being an online repository, can be used as a backup for the codes (and more) on your local computer. By pushing your work to Github every so often, you can create an online backup of your work. As a bonus, this also means you'll be able to access your codes (and more) from anywhere because they are online.
+
+**Collaboration and Sharing**<br>
+Git and Github are amazing tools for collaborating on research computing. Collaborators can simultaneously code locally on their own machines, push their file changes to Github, and Github will discover any conflicts and help you merge all the changes together. Also, pushing your local code to Github allows you to give out a URL to anyone you want to share your codes (and more) with. Note: you can use Github for version control of manuscripts and figures, but you do lose some functionality when you are tracking something other than codes, markdown files, or html.
+
+**Reproducibility**<br>
+Git and Github greatly improve computational reproducibility by enabling others access to your scientific codes (if you choose) and history of file changes. Github also interfaces with other computational reproducibility tools like Docker/Dockerhub for creating/sharing isolated software environments called containers. More on containers in the next segment.
 
 ## Git Terminology
 
@@ -256,7 +272,6 @@ After SSHing into Ceres, it is easy to load Conda from the software module syste
 At the time of this writing, the default Conda on Ceres is miniconda/4.7.12.
 
 {% capture text %}
-
 You will then want to immediately issue the following command which will put you in the base environment:<br>
 ```source activate```
 
@@ -265,8 +280,7 @@ Note: If you forget to ```source activate``` and later try to ```conda activate 
 After you ```source activate``` and are placed in the base environment, you will then be able to ```conda activate my_env``` with no problems.
 
 {% endcapture %}
-
-{% include alert.md text=text color=danger %}
+{% include alert.md text=text color=warning %}
 
 
 
@@ -275,10 +289,26 @@ When using JupyterHub to login to Ceres you will also have access to Conda.
 
 
 #### JupyterHub login with no container
-If you login to Ceres with JupyterHub and are not using a container, you will automatically have access to Conda- no need to load the module. At the time of this writing the default is miniconda/3.6. The Conda version shouldn't really matter, but if you run into problems with this older version you can always open a terminal in JupyterLab and execute the same commands as in the above section [From the Module System](#from-the-module-system) to load a more up-to-date Conda version from the software module system. 
+If you login to Ceres with JupyterHub and are not using a container, you will automatically have access to Conda- no need to load the module. At the time of this writing the default is miniconda/3.6. 
+
+{% capture text %}
+always remember to ```source activate``` immediately and to never ```conda init```
+
+see above [From the Module System](#from-the-module-system) for more detail
+{% endcapture %}
+{% include alert.md text=text color=warning %}
+
+The Conda version shouldn't really matter, but if you run into problems with this older version you can always open a terminal in JupyterLab and execute the same commands as in the above section [From the Module System](#from-the-module-system) to load a more up-to-date Conda version from the software module system. 
 
 #### JupyterHub login with a container
+If you login to Ceres with the workshop image "data_science_im_rs_vSCINetGeoWS_2020.sif" you will have access to miniconda/4.8.3.
 
+{% capture text %}
+always remember to ```source activate``` immediately and to never ```conda init```
+
+see above [From the Module System](#from-the-module-system) for more detail
+{% endcapture %}
+{% include alert.md text=text color=warning %}
 <br><br>
 
 ## Using Conda Environments to Create Isolated Software Workspaces
