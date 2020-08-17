@@ -314,9 +314,9 @@ see above [From the Module System](#from-the-module-system) for more detail
 
 One reason for this is because the base environment is a dynamic space that changes with Conda version updates whereas your other environments are isolated. You should create at least one other environment to install packages in. A better practice is to create a separate environment for each one of your projects. It's much easier to update certain software packages in your environments if your projects each have their own "sandbox". In addition, on Ceres you'll want to save the environments you create in your home directory or in your project /KEEP directory, whereas the base environment lives outside of your personal user account. 
 
-At this point you should be logged in to your Ceres home directory preferably by using JupyterHub (with no container) and have opened a terminal in JupyterLab. You could also SSH in and load the miniconda module as described in the [From the Module System](#from-the-module-system) section above, but the remainder of the tutorial will assume you logged in from JupyterHub.
-
 Many of the environments that we as geospatial researchers build contain enough software packages that the environment will take up multiple GBs of storage space. Because our environments are generally large, they take a while to build. **The best practice for creating Conda environments on Ceres is to first open an interactive compute session (i.e. don't create/remove environments or install packages on the login node).**
+
+At this point you should be logged in to your Ceres home directory preferably by using JupyterHub (with no container) and have opened a terminal in JupyterLab. You could also SSH in and load the miniconda module as described in the [From the Module System](#from-the-module-system) section above, but the remainder of this Conda tutorial will assume you logged in from JupyterHub.
 <br><br>
 
 ### The Conda Basics
