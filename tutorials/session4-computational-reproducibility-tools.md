@@ -413,9 +413,28 @@ Once you have the Session 3 Jupyter notebook open, on the top right of the noteb
 # Containers (Docker and Singularity)
 
 ## Why Use Containers?
+Using a container makes your codes portable from machine to machine regardless of operating system. Containers are a virtualized run-time environment- they are like handing someone the computer you used to execute your code. They allow you to bundle your software and its dependencies (including operating-system specific dependencies) in one tidy package that will run a specific isolated software environment on any operating system (e.g, Windos, Max, Linux flavors). 
+
+If you've ever written code on one machine and then tried to run it without success on a different machine, then you could benefit from using containers. As you can image, using containers to make your code portable means that sharing code between collaborators is very simple. And portable code makes it much easier for others to reproduce your results.
+
+This tutorial focuses on creating container images with Docker and running the images on the Ceres HPC with Singularity. You can also create container images with Singularity and store/version them on Singularity-hub but we have chosen to feature a mostly Docker workflow because Docker container images are currently much more common than Singularity. 
 
 ## Container Terminology
-image, container, Docker, DockerHub dockerfile, Singularity
+
+**DOCKER** - open source containerization software that you use at the command line to build and run container images
+
+**DOCKERHUB** - an online repository for finding and sharing container images. Dockerhub is like Github for your Docker images.
+
+**SINGULARITY** - like Docker, Singularity is open source containerization software that you use at the command line to build and run container images. Due to security concerns, Singularity is what Ceres HPC users must use to run container images.
+
+**CONTAINER** - a virtualized run-time environment where users can isolate applications from the underlying system. A container is created by running an image. On the Ceres HPC, we create containers using Singularity software to run Docker images.
+
+**CONTAINER IMAGE** - just image for short. A read-only file (.sif) that contains a collection of files such as source code, libraries, dependencies, tools, and other files needed to run a container. The steps in producing an image are added in layers. In this tutorial, we are working with Docker images. When an image is run it becomes a container. 
+
+**IMAGE LAYER** - 
+
+**DOCKERFILE** - a script of instructions that define how to build a specific Docker image 
+
 
 ## Accessing an Existing Docker Image
 
